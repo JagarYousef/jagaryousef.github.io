@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://jagaryousef.github.io/sitemap.xml
+Sitemap: https://jagar.me/sitemap.xml
