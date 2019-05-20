@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chatting on Jagar - Android &amp; Java smart tutorials</title>
-    <link>https://jagar.me/tags/chatting/</link>
+    <link>https://jagaryousef.github.io/tags/chatting/</link>
     <description>Recent content in Chatting on Jagar - Android &amp; Java smart tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 19 May 2019 14:17:58 +0300</lastBuildDate>
     
-	<atom:link href="https://jagar.me/tags/chatting/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jagaryousef.github.io/tags/chatting/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to create a view for voice messages in Android</title>
-      <link>https://jagar.me/post/voicemessagesview/</link>
+      <link>https://jagaryousef.github.io/post/voicemessagesview/</link>
       <pubDate>Sun, 19 May 2019 14:17:58 +0300</pubDate>
       
-      <guid>https://jagar.me/post/voicemessagesview/</guid>
+      <guid>https://jagaryousef.github.io/post/voicemessagesview/</guid>
       <description>&lt;h3 id=&#34;intro&#34;&gt;Intro&lt;/h3&gt;
 
 &lt;p&gt;In this tutorial, we will go step-by-step in implementing an easy voice player in Android and avoid all those android&amp;rsquo;s &lt;em&gt;MediaPlayer&lt;/em&gt; unwanted errors. So this could be a good option to be out there in your chat app.&lt;/p&gt;</description>

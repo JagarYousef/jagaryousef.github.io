@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Jagar - Android &amp; Java smart tutorials</title>
-    <link>https://jagar.me/categories/</link>
+    <link>https://jagaryousef.github.io/categories/</link>
     <description>Recent content in Categories on Jagar - Android &amp; Java smart tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 19 May 2019 14:17:58 +0300</lastBuildDate>
     
-	<atom:link href="https://jagar.me/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jagaryousef.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Android</title>
-      <link>https://jagar.me/categories/android/</link>
+      <link>https://jagaryousef.github.io/categories/android/</link>
       <pubDate>Sun, 19 May 2019 14:17:58 +0300</pubDate>
       
-      <guid>https://jagar.me/categories/android/</guid>
+      <guid>https://jagaryousef.github.io/categories/android/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Android Studio</title>
-      <link>https://jagar.me/categories/android-studio/</link>
+      <link>https://jagaryousef.github.io/categories/android-studio/</link>
       <pubDate>Sun, 19 May 2019 14:17:58 +0300</pubDate>
       
-      <guid>https://jagar.me/categories/android-studio/</guid>
+      <guid>https://jagaryousef.github.io/categories/android-studio/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java</title>
-      <link>https://jagar.me/categories/java/</link>
+      <link>https://jagaryousef.github.io/categories/java/</link>
       <pubDate>Sun, 19 May 2019 14:17:58 +0300</pubDate>
       
-      <guid>https://jagar.me/categories/java/</guid>
+      <guid>https://jagaryousef.github.io/categories/java/</guid>
       <description></description>
     </item>
     
