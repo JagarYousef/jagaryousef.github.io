@@ -1,69 +1,69 @@
-<?xml-stylesheet type="text/xsl" href="https://jagaryousef.github.io/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://jagar.me/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jagaryousef.github.io/categories/android/</loc>
+    <loc>https://jagar.me/categories/android/</loc>
     <lastmod>2019-05-19T14:17:58+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jagaryousef.github.io/categories/android-studio/</loc>
+    <loc>https://jagar.me/categories/android-studio/</loc>
     <lastmod>2019-05-19T14:17:58+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jagaryousef.github.io/categories/</loc>
+    <loc>https://jagar.me/categories/</loc>
     <lastmod>2019-05-19T14:17:58+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jagaryousef.github.io/tags/chatting/</loc>
+    <loc>https://jagar.me/tags/chatting/</loc>
     <lastmod>2019-05-19T14:17:58+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jagaryousef.github.io/post/voicemessagesview/</loc>
+    <loc>https://jagar.me/post/voicemessagesview/</loc>
     <lastmod>2019-05-19T14:17:58+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://jagaryousef.github.io/</loc>
+    <loc>https://jagar.me/</loc>
     <lastmod>2019-05-19T14:17:58+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jagaryousef.github.io/categories/java/</loc>
+    <loc>https://jagar.me/categories/java/</loc>
     <lastmod>2019-05-19T14:17:58+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jagaryousef.github.io/tags/mediaplayer/</loc>
+    <loc>https://jagar.me/tags/mediaplayer/</loc>
     <lastmod>2019-05-19T14:17:58+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jagaryousef.github.io/post/</loc>
+    <loc>https://jagar.me/post/</loc>
     <lastmod>2019-05-19T14:17:58+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jagaryousef.github.io/tags/seekbar/</loc>
+    <loc>https://jagar.me/tags/seekbar/</loc>
     <lastmod>2019-05-19T14:17:58+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jagaryousef.github.io/tags/</loc>
+    <loc>https://jagar.me/tags/</loc>
     <lastmod>2019-05-19T14:17:58+03:00</lastmod>
     <priority>0</priority>
   </url>
