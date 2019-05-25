@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>The easiest and best way to pass data (arguments) between controllers in JavaFX - Jagar - Android &amp; Java smart tutorials</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Jagar" /><meta name="description" content="Intro Most of programs in this world would need to pass different data and arguments between the different layouts and screens, so we will explain the easiest way to have this done in JavaFX in this tutorial.
+" /><meta name="keywords" content="Java, Android, Tutorials" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://jagar.me/post/passingdatainjavafx/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="The easiest and best way to pass data (arguments) between controllers in JavaFX" />
+<meta property="og:description" content="Intro
+
+Most of programs in this world would need to pass different data and arguments between the different layouts and screens, so we will explain the easiest way to have this done in JavaFX in this tutorial." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jagar.me/post/passingdatainjavafx/" />
+<meta property="article:published_time" content="2019-05-25T09:44:58&#43;03:00"/>
+<meta property="article:modified_time" content="2019-05-25T09:44:58&#43;03:00"/>
+
+<meta itemprop="name" content="The easiest and best way to pass data (arguments) between controllers in JavaFX">
+<meta itemprop="description" content="Intro
+
+Most of programs in this world would need to pass different data and arguments between the different layouts and screens, so we will explain the easiest way to have this done in JavaFX in this tutorial.">
+
+
+<meta itemprop="datePublished" content="2019-05-25T09:44:58&#43;03:00" />
+<meta itemprop="dateModified" content="2019-05-25T09:44:58&#43;03:00" />
+<meta itemprop="wordCount" content="360">
+
+
+
+<meta itemprop="keywords" content="JavaFX,FXML,Passing Data,Controllers," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The easiest and best way to pass data (arguments) between controllers in JavaFX"/>
+<meta name="twitter:description" content="Intro
+
+Most of programs in this world would need to pass different data and arguments between the different layouts and screens, so we will explain the easiest way to have this done in JavaFX in this tutorial."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Jagar</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Jagar</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">The easiest and best way to pass data (arguments) between controllers in JavaFX</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-05-25 </span>
+        <div class="post-category">
+            <a href="/categories/java/"> Java </a>
+            <a href="/categories/javafx/"> JavaFX </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#intro">Intro</a></li>
+<li><a href="#structure">Structure</a>
+<ul>
+<li><a href="#the-plan">The Plan</a></li>
+</ul></li>
+<li><a href="#steps">Steps</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="intro">Intro</h3>
+
+<p>Most of programs in this world would need to pass different data and arguments between the different layouts and screens, so we will explain the easiest way to have this done in JavaFX in this tutorial.</p>
+
+<h3 id="structure">Structure</h3>
+
+<p>In our demonstration, we will create the following files:</p>
+
+<ul>
+<li><p>Main.java</p></li>
+
+<li><p>layout1.fxml</p></li>
+
+<li><p>layout2.fxml</p></li>
+
+<li><p>controller1.java</p></li>
+
+<li><p>controller2.java</p></li>
+</ul>
+
+<p>Our program will open our main java class which request layout1 with its controller (controller1) to be displayed, so we will keep the default codes in our main.java:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Parent</span> <span class="n">root</span> <span class="o">=</span> <span class="n">FXMLLoader</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="n">getClass</span><span class="o">().</span><span class="na">getResource</span><span class="o">(</span><span class="s">&#34;layout1.fxml&#34;</span><span class="o">));</span>
+<span class="n">primaryStage</span><span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">&#34;Layout1 + Controller1&#34;</span><span class="o">);</span>
+<span class="n">primaryStage</span><span class="o">.</span><span class="na">setScene</span><span class="o">(</span><span class="k">new</span> <span class="n">Scene</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="n">300</span><span class="o">,</span> <span class="n">275</span><span class="o">));</span>
+<span class="n">primaryStage</span><span class="o">.</span><span class="na">show</span><span class="o">();</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="the-plan">The Plan</h4>
+
+<p>We will have a textfield and a button in layout1, and we want to display layout2 with a label of the text that was entered in this textfiled after the button is clicked in layout1.</p>
+
+<p><img src="https://user-images.githubusercontent.com/41321155/58366228-d4840100-7ed7-11e9-9778-bd34ed9ab767.jpg" alt="pass a value from one fxml to another" /></p>
+
+<h3 id="steps">Steps</h3>
+
+<ol>
+<li>Add controls to <code>layout1</code> and <code>layout2</code></li>
+</ol>
+
+<p>layout1:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml">   <span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+   <span class="cp">&lt;?import javafx.scene.control.Button?&gt;</span>
+   <span class="cp">&lt;?import javafx.scene.control.TextField?&gt;</span>
+   <span class="cp">&lt;?import javafx.scene.layout.AnchorPane?&gt;</span>
+   
+   <span class="nt">&lt;AnchorPane</span> <span class="na">prefHeight=</span><span class="s">&#34;400.0&#34;</span> <span class="na">prefWidth=</span><span class="s">&#34;600.0&#34;</span> <span class="na">xmlns=</span><span class="s">&#34;http://javafx.com/javafx/8.0.172-ea&#34;</span> 
+               <span class="na">xmlns:fx=</span><span class="s">&#34;http://javafx.com/fxml/1&#34;</span> <span class="na">fx:controller=</span><span class="s">&#34;controller1&#34;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;children&gt;</span>
+         <span class="nt">&lt;TextField</span> <span class="na">fx:id=</span><span class="s">&#34;textfield&#34;</span> <span class="na">layoutX=</span><span class="s">&#34;195.0&#34;</span> <span class="na">layoutY=</span><span class="s">&#34;110.0&#34;</span> <span class="nt">/&gt;</span>
+         <span class="nt">&lt;Button</span> <span class="na">fx:id=</span><span class="s">&#34;button&#34;</span> <span class="na">layoutX=</span><span class="s">&#34;194.0&#34;</span> <span class="na">layoutY=</span><span class="s">&#34;169.0&#34;</span> <span class="na">mnemonicParsing=</span><span class="s">&#34;false&#34;</span> <span class="na">text=</span><span class="s">&#34;Take this value to layout2&#34;</span> <span class="na">onMouseClicked=</span><span class="s">&#34;#buttonClicked&#34;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/children&gt;</span>
+   <span class="nt">&lt;/AnchorPane&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>layout2:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml">   <span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+   <span class="cp">&lt;?import javafx.scene.control.Label?&gt;</span>
+   <span class="cp">&lt;?import javafx.scene.layout.AnchorPane?&gt;</span>
+   
+   <span class="nt">&lt;AnchorPane</span> <span class="na">prefHeight=</span><span class="s">&#34;400.0&#34;</span> <span class="na">prefWidth=</span><span class="s">&#34;600.0&#34;</span> <span class="na">xmlns=</span><span class="s">&#34;http://javafx.com/javafx/8.0.172-ea&#34;</span>
+               <span class="na">xmlns:fx=</span><span class="s">&#34;http://javafx.com/fxml/1&#34;</span> 
+               <span class="na">fx:controller=</span><span class="s">&#34;controller2&#34;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;children&gt;</span>
+         <span class="nt">&lt;Label</span> <span class="na">fx:id=</span><span class="s">&#34;label&#34;</span> <span class="na">layoutX=</span><span class="s">&#34;283.0&#34;</span> <span class="na">layoutY=</span><span class="s">&#34;145.0&#34;</span> <span class="na">text=</span><span class="s">&#34;Label&#34;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/children&gt;</span>
+   <span class="nt">&lt;/AnchorPane&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>We will create a method in <code>controller2</code> that will set the text of the label inside <code>layout2</code>:</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java">   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setLabelText</span><span class="o">(</span><span class="n">String</span> <span class="n">text</span><span class="o">){</span>
+       <span class="n">label</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
+   <span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>Now we will need add an addition to our usual way when displaying a new stage in JavaFX, so we will be able to call <code>setLabelText()</code> method within <code>controller1</code></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java">   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">buttonClicked</span><span class="o">(){</span>
+   
+       <span class="k">try</span> <span class="o">{</span>
+           <span class="n">FXMLLoader</span> <span class="n">loader</span> <span class="o">=</span> <span class="k">new</span> 		  <span class="n">FXMLLoader</span><span class="o">(</span><span class="n">getClass</span><span class="o">().</span><span class="na">getResource</span><span class="o">(</span><span class="s">&#34;layout2.fxml&#34;</span><span class="o">));</span>
+           <span class="n">Parent</span> <span class="n">root</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="na">load</span><span class="o">();</span>
+   
+           <span class="c1">//The following both lines are the only addition we need to pass the arguments
+</span><span class="c1"></span>           <span class="n">controller2</span> <span class="n">controller2</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="na">getController</span><span class="o">();</span>
+           <span class="n">controller2</span><span class="o">.</span><span class="na">setLabelText</span><span class="o">(</span><span class="n">textfield</span><span class="o">.</span><span class="na">getText</span><span class="o">());</span>
+   
+           <span class="n">Stage</span> <span class="n">stage</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stage</span><span class="o">();</span>
+           <span class="n">stage</span><span class="o">.</span><span class="na">setScene</span><span class="o">(</span><span class="k">new</span> <span class="n">Scene</span><span class="o">(</span><span class="n">root</span><span class="o">));</span>
+           <span class="n">stage</span><span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">&#34;Layout2 + Controller2&#34;</span><span class="o">);</span>
+           <span class="n">stage</span><span class="o">.</span><span class="na">show</span><span class="o">();</span>
+   
+       <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+           <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+       <span class="o">}</span>
+   <span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>Note:</strong> We <u>need</u> to specify the controllers within fxml layouts like usual.</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Jagar</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-05-25
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/javafx/">JavaFX</a>
+          <a href="/tags/fxml/">FXML</a>
+          <a href="/tags/passing-data/">Passing Data</a>
+          <a href="/tags/controllers/">Controllers</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/voicemessagesview/">
+            <span class="next-text nav-default">How to create a view for voice messages in Android</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'jagar-1';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:jagaryousef@my.uopeople.edu" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/JagarYousef" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://stackoverflow.com/users/10222681/cergo" class="iconfont icon-github" title="github"></a>
+  <a href="https://jagar.me/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Jagar</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-140415448-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

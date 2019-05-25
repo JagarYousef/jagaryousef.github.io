@@ -6,10 +6,21 @@
     <description>Recent content in Java on Jagar - Android &amp; Java smart tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 19 May 2019 14:17:58 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 25 May 2019 09:44:58 +0300</lastBuildDate>
     
 	<atom:link href="https://jagar.me/categories/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The easiest and best way to pass data (arguments) between controllers in JavaFX</title>
+      <link>https://jagar.me/post/passingdatainjavafx/</link>
+      <pubDate>Sat, 25 May 2019 09:44:58 +0300</pubDate>
+      
+      <guid>https://jagar.me/post/passingdatainjavafx/</guid>
+      <description>&lt;h3 id=&#34;intro&#34;&gt;Intro&lt;/h3&gt;
+
+&lt;p&gt;Most of programs in this world would need to pass different data and arguments between the different layouts and screens, so we will explain the easiest way to have this done in JavaFX in this tutorial.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>How to create a view for voice messages in Android</title>

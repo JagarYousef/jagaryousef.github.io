@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Jagar - Android &amp; Java smart tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 19 May 2019 14:17:58 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 25 May 2019 09:44:58 +0300</lastBuildDate>
     
 	<atom:link href="https://jagar.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Controllers</title>
+      <link>https://jagar.me/tags/controllers/</link>
+      <pubDate>Sat, 25 May 2019 09:44:58 +0300</pubDate>
+      
+      <guid>https://jagar.me/tags/controllers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FXML</title>
+      <link>https://jagar.me/tags/fxml/</link>
+      <pubDate>Sat, 25 May 2019 09:44:58 +0300</pubDate>
+      
+      <guid>https://jagar.me/tags/fxml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaFX</title>
+      <link>https://jagar.me/tags/javafx/</link>
+      <pubDate>Sat, 25 May 2019 09:44:58 +0300</pubDate>
+      
+      <guid>https://jagar.me/tags/javafx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Passing Data</title>
+      <link>https://jagar.me/tags/passing-data/</link>
+      <pubDate>Sat, 25 May 2019 09:44:58 +0300</pubDate>
+      
+      <guid>https://jagar.me/tags/passing-data/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Chatting</title>

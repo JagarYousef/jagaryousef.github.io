@@ -2,6 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jagar.me/categories/</loc>
+    <lastmod>2019-05-25T09:44:58+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/controllers/</loc>
+    <lastmod>2019-05-25T09:44:58+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/fxml/</loc>
+    <lastmod>2019-05-25T09:44:58+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/</loc>
+    <lastmod>2019-05-25T09:44:58+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/categories/java/</loc>
+    <lastmod>2019-05-25T09:44:58+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/categories/javafx/</loc>
+    <lastmod>2019-05-25T09:44:58+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/javafx/</loc>
+    <lastmod>2019-05-25T09:44:58+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/passing-data/</loc>
+    <lastmod>2019-05-25T09:44:58+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/post/</loc>
+    <lastmod>2019-05-25T09:44:58+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/</loc>
+    <lastmod>2019-05-25T09:44:58+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/post/passingdatainjavafx/</loc>
+    <lastmod>2019-05-25T09:44:58+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://jagar.me/categories/android/</loc>
     <lastmod>2019-05-19T14:17:58+03:00</lastmod>
     <priority>0</priority>
@@ -9,12 +76,6 @@
   
   <url>
     <loc>https://jagar.me/categories/android-studio/</loc>
-    <lastmod>2019-05-19T14:17:58+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jagar.me/categories/</loc>
     <lastmod>2019-05-19T14:17:58+03:00</lastmod>
     <priority>0</priority>
   </url>
@@ -33,37 +94,13 @@
   </url>
   
   <url>
-    <loc>https://jagar.me/</loc>
-    <lastmod>2019-05-19T14:17:58+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jagar.me/categories/java/</loc>
-    <lastmod>2019-05-19T14:17:58+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://jagar.me/tags/mediaplayer/</loc>
     <lastmod>2019-05-19T14:17:58+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jagar.me/post/</loc>
-    <lastmod>2019-05-19T14:17:58+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://jagar.me/tags/seekbar/</loc>
-    <lastmod>2019-05-19T14:17:58+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jagar.me/tags/</loc>
     <lastmod>2019-05-19T14:17:58+03:00</lastmod>
     <priority>0</priority>
   </url>

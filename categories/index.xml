@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Jagar - Android &amp; Java smart tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 19 May 2019 14:17:58 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 25 May 2019 09:44:58 +0300</lastBuildDate>
     
 	<atom:link href="https://jagar.me/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java</title>
+      <link>https://jagar.me/categories/java/</link>
+      <pubDate>Sat, 25 May 2019 09:44:58 +0300</pubDate>
+      
+      <guid>https://jagar.me/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaFX</title>
+      <link>https://jagar.me/categories/javafx/</link>
+      <pubDate>Sat, 25 May 2019 09:44:58 +0300</pubDate>
+      
+      <guid>https://jagar.me/categories/javafx/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Android</title>
@@ -26,15 +44,6 @@
       <pubDate>Sun, 19 May 2019 14:17:58 +0300</pubDate>
       
       <guid>https://jagar.me/categories/android-studio/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>https://jagar.me/categories/java/</link>
-      <pubDate>Sun, 19 May 2019 14:17:58 +0300</pubDate>
-      
-      <guid>https://jagar.me/categories/java/</guid>
       <description></description>
     </item>
     
