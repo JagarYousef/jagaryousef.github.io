@@ -327,9 +327,8 @@
 
 <p>For example, we will add another button to <code>layout2</code> and display &ldquo;Welcome&rdquo; inside <code>textfield</code> on <code>layout1</code> once it is clicked. We can do this easily with following approach:</p>
 
-<ol>
-<li>We will need to pass the <code>textfield</code> as an argument when we call <code>setLabelText()</code> within <code>controller1</code>:</li>
-</ol>
+<ul>
+<li><p>We will need to pass the <code>textfield</code> as an argument when we call <code>setLabelText()</code> within <code>controller1</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
@@ -342,18 +341,19 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">buttonClicked</span><span class="o">(){</span>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">buttonClicked</span><span class="o">(){</span>
 
-   	<span class="k">try</span> <span class="o">{</span>
-     	<span class="o">...</span>
-       <span class="n">controller2</span><span class="o">.</span><span class="na">setLabelText</span><span class="o">(</span><span class="n">textfield</span><span class="o">.</span><span class="na">getText</span><span class="o">(),</span> <span class="n">textfield</span><span class="o">);</span>
-   	<span class="o">...</span>
-   	<span class="o">}</span>
-   <span class="o">}</span></code></pre></td></tr></table>
+    <span class="k">try</span> <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="n">controller2</span><span class="o">.</span><span class="na">setLabelText</span><span class="o">(</span><span class="n">textfield</span><span class="o">.</span><span class="na">getText</span><span class="o">(),</span> <span class="n">textfield</span><span class="o">);</span>
+    <span class="o">...</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></td></tr></table>
 </div>
 </div>
-<ol>
-<li><p>We will init the passed <code>textfield</code> to a local TextFiled within controller2.</p>
+<ul>
+<li>We will init the passed <code>textfield</code> to a local TextFiled within controller2.</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
@@ -368,21 +368,20 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">  <span class="o">...</span>
+<pre class="chroma"><code class="language-java" data-lang="java">   <span class="o">...</span>
 
-  <span class="nd">@FXML</span> <span class="n">TextField</span> <span class="n">textfield</span><span class="o">;</span>
+   <span class="nd">@FXML</span> <span class="n">TextField</span> <span class="n">textfield</span><span class="o">;</span>
 
-  <span class="o">...</span>
+   <span class="o">...</span>
 
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setLabelText</span><span class="o">(</span><span class="n">String</span> <span class="n">text</span><span class="o">,</span> <span class="n">TextField</span> <span class="n">textfield</span><span class="o">){</span>
-      <span class="n">label</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
-      <span class="k">this</span><span class="o">.</span><span class="na">textfield</span> <span class="o">=</span> <span class="n">textfield</span><span class="o">;</span>
-  <span class="o">}</span></code></pre></td></tr></table>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setLabelText</span><span class="o">(</span><span class="n">String</span> <span class="n">text</span><span class="o">,</span> <span class="n">TextField</span> <span class="n">textfield</span><span class="o">){</span>
+       <span class="n">label</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
+       <span class="k">this</span><span class="o">.</span><span class="na">textfield</span> <span class="o">=</span> <span class="n">textfield</span><span class="o">;</span>
+   <span class="o">}</span></code></pre></td></tr></table>
 </div>
-</div>
-<ol>
-<li>Now, we can update or do what we want with the <code>new textfield</code> inside <code>controller2</code> and the same updates will be applied on the <code>passed textfield</code>.</li>
-</ol>
+</div></li>
+
+<li><p>Now, we can update or do what we want with the <code>new textfield</code> inside <code>controller2</code> and the same updates will be applied on the <code>passed textfield</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
@@ -392,14 +391,13 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">buttonWelcomeClicked</span><span class="o">(){</span>
-   <span class="n">textField</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">&#34;Welcome&#34;</span><span class="o">);</span>
-   
+    <span class="n">textField</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">&#34;Welcome&#34;</span><span class="o">);</span>
+
 <span class="o">}</span></code></pre></td></tr></table>
 </div>
-</div></li>
-</ol>
-
-<p><img src="https://user-images.githubusercontent.com/41321155/58367260-fa180700-7ee5-11e9-9c6f-eebb090d6073.jpg" alt="send data back from popup in javafx" /></p>
+</div>
+<p><img src="https://user-images.githubusercontent.com/41321155/58367260-fa180700-7ee5-11e9-9c6f-eebb090d6073.jpg" alt="send data back from popup in javafx" /></p></li>
+</ul>
     </div>
 
     <div class="post-copyright">
