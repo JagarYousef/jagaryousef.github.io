@@ -17,9 +17,7 @@
       <pubDate>Sat, 25 May 2019 09:44:58 +0300</pubDate>
       
       <guid>https://jagar.me/post/passingdatainjavafx/</guid>
-      <description>&lt;h3 id=&#34;intro&#34;&gt;Intro&lt;/h3&gt;
-
-&lt;p&gt;Most of programs in this world would need to pass different data and arguments between the different layouts and screens, so we will explain the easiest way to have this done in JavaFX in this tutorial.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Most of programs in this world would need to pass different data and arguments between the different layouts and screens, so we will explain the easiest way to have this done in JavaFX in this tutorial.&lt;/p&gt;</description>
     </item>
     
   </channel>
