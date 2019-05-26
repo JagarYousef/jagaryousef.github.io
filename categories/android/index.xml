@@ -6,10 +6,21 @@
     <description>Recent content in Android on Jagar - Android &amp; Java smart tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 19 May 2019 14:17:58 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 26 May 2019 08:41:44 +0300</lastBuildDate>
     
 	<atom:link href="https://jagar.me/categories/android/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to use camera and capture photos in your app without using any other apps in Android Studio (using camera2)</title>
+      <link>https://jagar.me/post/opencamera2window/</link>
+      <pubDate>Sun, 26 May 2019 08:41:44 +0300</pubDate>
+      
+      <guid>https://jagar.me/post/opencamera2window/</guid>
+      <description>In this tutorial we will go step-by-step on how to implement camera2 in our android app through opening a dialog with camera view, capturing a picture and display it in an ImageView without the need to open the default camera app or any other app in Android studio. This will add a great functionality to your apps.
+ Permissions We will add the following permissions to our AndroidManifest.xml:
+1 2 3 4  &amp;lt;uses-permission android:name=&amp;#34;android.</description>
+    </item>
     
     <item>
       <title>How to create a view for voice messages in Android</title>

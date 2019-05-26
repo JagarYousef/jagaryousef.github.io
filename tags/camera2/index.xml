@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Android Studio on Jagar - Android &amp; Java smart tutorials</title>
-    <link>https://jagar.me/categories/android-studio/</link>
-    <description>Recent content in Android Studio on Jagar - Android &amp; Java smart tutorials</description>
+    <title>Camera2 on Jagar - Android &amp; Java smart tutorials</title>
+    <link>https://jagar.me/tags/camera2/</link>
+    <description>Recent content in Camera2 on Jagar - Android &amp; Java smart tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 26 May 2019 08:41:44 +0300</lastBuildDate>
     
-	<atom:link href="https://jagar.me/categories/android-studio/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jagar.me/tags/camera2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,15 +20,6 @@
       <description>In this tutorial we will go step-by-step on how to implement camera2 in our android app through opening a dialog with camera view, capturing a picture and display it in an ImageView without the need to open the default camera app or any other app in Android studio. This will add a great functionality to your apps.
  Permissions We will add the following permissions to our AndroidManifest.xml:
 1 2 3 4  &amp;lt;uses-permission android:name=&amp;#34;android.</description>
-    </item>
-    
-    <item>
-      <title>How to create a view for voice messages in Android</title>
-      <link>https://jagar.me/post/voicemessagesview/</link>
-      <pubDate>Sun, 19 May 2019 14:17:58 +0300</pubDate>
-      
-      <guid>https://jagar.me/post/voicemessagesview/</guid>
-      <description>&lt;p&gt;In this tutorial, we will go step-by-step in implementing an easy voice player in Android and avoid all those android&amp;rsquo;s &lt;em&gt;MediaPlayer&lt;/em&gt; unwanted errors. So this could be a good option to be out there in your chat app.&lt;/p&gt;</description>
     </item>
     
   </channel>

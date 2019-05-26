@@ -2,8 +2,81 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jagar.me/categories/android/</loc>
+    <lastmod>2019-05-26T08:41:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/categories/android-studio/</loc>
+    <lastmod>2019-05-26T08:41:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/camera2/</loc>
+    <lastmod>2019-05-26T08:41:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/camerakit/</loc>
+    <lastmod>2019-05-26T08:41:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/capture-pictures/</loc>
+    <lastmod>2019-05-26T08:41:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://jagar.me/categories/</loc>
-    <lastmod>2019-05-25T09:44:58+03:00</lastmod>
+    <lastmod>2019-05-26T08:41:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/example/</loc>
+    <lastmod>2019-05-26T08:41:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/post/opencamera2window/</loc>
+    <lastmod>2019-05-26T08:41:44+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/</loc>
+    <lastmod>2019-05-26T08:41:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/categories/java/</loc>
+    <lastmod>2019-05-26T08:41:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/open-a-camera-window/</loc>
+    <lastmod>2019-05-26T08:41:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/post/</loc>
+    <lastmod>2019-05-26T08:41:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/</loc>
+    <lastmod>2019-05-26T08:41:44+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -20,13 +93,7 @@
   </url>
   
   <url>
-    <loc>https://jagar.me/</loc>
-    <lastmod>2019-05-25T09:44:58+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jagar.me/categories/java/</loc>
+    <loc>https://jagar.me/tags/javafx/</loc>
     <lastmod>2019-05-25T09:44:58+03:00</lastmod>
     <priority>0</priority>
   </url>
@@ -38,25 +105,7 @@
   </url>
   
   <url>
-    <loc>https://jagar.me/tags/javafx/</loc>
-    <lastmod>2019-05-25T09:44:58+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://jagar.me/tags/passing-data/</loc>
-    <lastmod>2019-05-25T09:44:58+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jagar.me/post/</loc>
-    <lastmod>2019-05-25T09:44:58+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jagar.me/tags/</loc>
     <lastmod>2019-05-25T09:44:58+03:00</lastmod>
     <priority>0</priority>
   </url>
@@ -66,18 +115,6 @@
     <lastmod>2019-05-25T09:44:58+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://jagar.me/categories/android/</loc>
-    <lastmod>2019-05-19T14:17:58+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jagar.me/categories/android-studio/</loc>
-    <lastmod>2019-05-19T14:17:58+03:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
