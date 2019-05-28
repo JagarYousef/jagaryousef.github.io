@@ -17,8 +17,7 @@
       <pubDate>Sun, 26 May 2019 08:41:44 +0300</pubDate>
       
       <guid>https://jagar.me/post/opencamera2window/</guid>
-      <description>In this tutorial we will go step-by-step on how to implement camera2 in our android app through opening a dialog with camera view, capturing a picture and display it in an ImageView without the need to open the default camera app or any other app in Android studio. This will add a great functionality to your apps.
-  Permissions We will add the following permissions to our AndroidManifest.xml:</description>
+      <description>&lt;p&gt;In this tutorial we will go step-by-step on how to implement camera2 in our android app through opening a dialog with camera view, capturing a picture and display it in an ImageView without the need to open the default camera app or any other app in Android studio. This will add a great functionality to your apps.&lt;/p&gt;</description>
     </item>
     
     <item>
