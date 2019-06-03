@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>How to create Mind Mapping View (Hierarchy view) in Android Studio Easily - Jagar</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Jagar" /><meta name="description" content="In this tutorial we will explain an easy way to create and customize a mind mapping, hierarchy or tree view in android studio using Mindo android library, which brings an easy approach to implement this with its full functionality.
+" /><meta name="keywords" content="Java, Android, Tutorials" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://jagar.me/post/mindmappingviewandroid/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="How to create Mind Mapping View (Hierarchy view) in Android Studio Easily" />
+<meta property="og:description" content="In this tutorial we will explain an easy way to create and customize a mind mapping, hierarchy or tree view in android studio using Mindo android library, which brings an easy approach to implement this with its full functionality." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jagar.me/post/mindmappingviewandroid/" />
+<meta property="article:published_time" content="2019-06-03T10:39:20&#43;03:00"/>
+<meta property="article:modified_time" content="2019-06-03T10:39:20&#43;03:00"/>
+
+<meta itemprop="name" content="How to create Mind Mapping View (Hierarchy view) in Android Studio Easily">
+<meta itemprop="description" content="In this tutorial we will explain an easy way to create and customize a mind mapping, hierarchy or tree view in android studio using Mindo android library, which brings an easy approach to implement this with its full functionality.">
+
+
+<meta itemprop="datePublished" content="2019-06-03T10:39:20&#43;03:00" />
+<meta itemprop="dateModified" content="2019-06-03T10:39:20&#43;03:00" />
+<meta itemprop="wordCount" content="877">
+
+
+
+<meta itemprop="keywords" content="Hierarchy,Tree,Mind Mapping,Library,Canvas,Mindo," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to create Mind Mapping View (Hierarchy view) in Android Studio Easily"/>
+<meta name="twitter:description" content="In this tutorial we will explain an easy way to create and customize a mind mapping, hierarchy or tree view in android studio using Mindo android library, which brings an easy approach to implement this with its full functionality."/>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1293903967179873",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Jagar</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Jagar</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">How to create Mind Mapping View (Hierarchy view) in Android Studio Easily</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-06-03 </span>
+        <div class="post-category">
+            <a href="/categories/android/"> Android </a>
+            <a href="/categories/java/"> Java </a>
+            <a href="/categories/android-studio/"> Android Studio </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#adding-the-dependency">Adding the dependency</a></li>
+<li><a href="#xml">XML</a></li>
+<li><a href="#java">Java</a>
+<ul>
+<li><a href="#adding-the-root">Adding the root</a></li>
+<li><a href="#adding-the-childs">Adding the childs</a></li>
+<li><a href="#adding-connection-text-messages">Adding Connection Text Messages</a></li>
+<li><a href="#adding-sub-childs">Adding Sub-Childs</a></li>
+<li><a href="#adding-custom-connections">Adding Custom Connections</a></li>
+<li><a href="#handling-events">Handling events</a></li>
+</ul></li>
+<li><a href="#customization">Customization</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>In this tutorial we will explain an easy way to create and customize a mind mapping, hierarchy or tree view in android studio using Mindo android library, which brings an easy approach to implement this with its full functionality.</p>
+
+<p><center><img src="https://user-images.githubusercontent.com/41321155/58802937-02bfba00-8617-11e9-9d1f-2d1264a07e27.gif"></img></center>
+<!--adsense--></p>
+
+<h3 id="adding-the-dependency">Adding the dependency</h3>
+
+<p>As mentioned in the github repo, we will add the dependency in two steps:</p>
+
+<p><strong>Step 1.</strong> Add it in your root build.gradle at the end of repositories:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-groovy" data-lang="groovy">	<span class="n">allprojects</span> <span class="o">{</span>
+		<span class="n">repositories</span> <span class="o">{</span>
+			<span class="o">...</span>
+			<span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;https://jitpack.io&#39;</span> <span class="o">}</span>
+		<span class="o">}</span>
+	<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>Step 2.</strong> Add the dependency</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-groovy" data-lang="groovy">	<span class="n">dependencies</span> <span class="o">{</span>
+	        <span class="n">implementation</span> <span class="s1">&#39;com.github.JagarYousef:Mindo:1.0.0&#39;</span>
+	<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="xml">XML</h3>
+
+<p>In our xml layout, we will only add the <code>MindMappingView</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;me.jagar.mindmappingandroidlibrary.Views.MindMappingView</span>
+    <span class="na">android:id=</span><span class="s">&#34;@+id/mind_mapping_view&#34;</span>
+    <span class="na">android:background=</span><span class="s">&#34;#fff&#34;</span>
+    <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+    <span class="na">android:layout_height=</span><span class="s">&#34;match_parent&#34;</span><span class="nt">/&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Be aware, you need to add background color to display the connections.</p>
+
+<h3 id="java">Java</h3>
+
+<p>In our activity we will init the <code>mindMappingView</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="n">MindMappingView</span> <span class="n">mindMappingView</span><span class="o">;</span>
+<span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+    <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+
+    <span class="n">mindMappingView</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">mind_mapping_view</span><span class="o">);</span>
+
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="adding-the-root">Adding the root</h4>
+
+<p>Now we are ready to go and add our items, so will start with our root or the central item which will be at the center of the view and then we can add child items to it:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//Creating the root item
+</span><span class="c1"></span><span class="n">Item</span> <span class="n">root</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Item</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span> <span class="o">,</span> <span class="s">&#34;The title of the root&#34;</span><span class="o">,</span> <span class="s">&#34;The content of the root&#34;</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+
+<span class="c1">//Adding the root item to the mindMappingView
+</span><span class="c1"></span><span class="n">mindMappingView</span><span class="o">.</span><span class="na">addCentralItem</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="kc">false</span><span class="o">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>I have used true for the default style of the root item, I can customize it later or I can set it to false so I only get a <code>LinearLayout</code> with two vertically sorted <code>TextViews</code> (Title and Content). For sure you can customize those <code>TextViews</code> as well.</p>
+
+<p><center><img src="https://user-images.githubusercontent.com/41321155/58803097-57fbcb80-8617-11e9-8b0e-f6c4f28fc9fb.png"></img></center></p>
+
+<h4 id="adding-the-childs">Adding the childs</h4>
+
+<p>We will create 4 items then adding them as child of the root in the four different sides of the root:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//Creating childs
+</span><span class="c1"></span><span class="n">Item</span> <span class="n">child1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Item</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">&#34;Child1 Title&#34;</span><span class="o">,</span> <span class="s">&#34;Child1 Content&#34;</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+<span class="n">Item</span> <span class="n">child2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Item</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">&#34;Child2 Title&#34;</span><span class="o">,</span> <span class="s">&#34;Child2 Content&#34;</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+<span class="n">Item</span> <span class="n">child3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Item</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">&#34;Child3 Title&#34;</span><span class="o">,</span> <span class="s">&#34;Child3 Content&#34;</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+<span class="n">Item</span> <span class="n">child4</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Item</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">&#34;Child4 Title&#34;</span><span class="o">,</span> <span class="s">&#34;Child4 Content&#34;</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+
+<span class="c1">//Adding childs to the different sides of the root
+</span><span class="c1"></span><span class="n">mindMappingView</span><span class="o">.</span><span class="na">addItem</span><span class="o">(</span><span class="n">child1</span><span class="o">,</span> <span class="n">root</span><span class="o">,</span> <span class="n">200</span><span class="o">,</span> <span class="n">15</span><span class="o">,</span> <span class="n">ItemLocation</span><span class="o">.</span><span class="na">TOP</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+<span class="n">mindMappingView</span><span class="o">.</span><span class="na">addItem</span><span class="o">(</span><span class="n">child2</span><span class="o">,</span> <span class="n">root</span><span class="o">,</span> <span class="n">200</span><span class="o">,</span> <span class="n">15</span><span class="o">,</span> <span class="n">ItemLocation</span><span class="o">.</span><span class="na">RIGHT</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+<span class="n">mindMappingView</span><span class="o">.</span><span class="na">addItem</span><span class="o">(</span><span class="n">child3</span><span class="o">,</span> <span class="n">root</span><span class="o">,</span> <span class="n">200</span><span class="o">,</span> <span class="n">15</span><span class="o">,</span> <span class="n">ItemLocation</span><span class="o">.</span><span class="na">BOTTOM</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+<span class="n">mindMappingView</span><span class="o">.</span><span class="na">addItem</span><span class="o">(</span><span class="n">child4</span><span class="o">,</span> <span class="n">root</span><span class="o">,</span> <span class="n">200</span><span class="o">,</span> <span class="n">15</span><span class="o">,</span> <span class="n">ItemLocation</span><span class="o">.</span><span class="na">LEFT</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><center><img src="https://user-images.githubusercontent.com/41321155/58803134-6a760500-8617-11e9-946f-e970cae1649f.png"></img></center></p>
+
+<h4 id="adding-connection-text-messages">Adding Connection Text Messages</h4>
+
+<p>We can add textviews on the connection between the root and the different items. For this we will create the <code>ConnectionTextMessage</code> and init it when adding the child to its parent (as shown in the above step):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">ConnectionTextMessage</span> <span class="n">connectionTextMessage</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ConnectionTextMessage</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">);</span>
+<span class="n">connectionTextMessage</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">&#34;This is a text\n on the connection&#34;</span><span class="o">);</span>
+
+<span class="c1">//some customization
+</span><span class="c1"></span><span class="n">connectionTextMessage</span><span class="o">.</span><span class="na">setBackgroundColor</span><span class="o">(</span><span class="n">Color</span><span class="o">.</span><span class="na">GRAY</span><span class="o">);</span>
+<span class="n">connectionTextMessage</span><span class="o">.</span><span class="na">setTextColor</span><span class="o">(</span><span class="n">Color</span><span class="o">.</span><span class="na">WHITE</span><span class="o">);</span>
+
+<span class="n">mindMappingView</span><span class="o">.</span><span class="na">addItem</span><span class="o">(</span><span class="n">child4</span><span class="o">,</span> <span class="n">root</span><span class="o">,</span> <span class="n">400</span><span class="o">,</span> <span class="n">15</span><span class="o">,</span> <span class="n">ItemLocation</span><span class="o">.</span><span class="na">LEFT</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="n">connectionTextMessage</span><span class="o">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><center><img src="https://user-images.githubusercontent.com/41321155/58803224-92fdff00-8617-11e9-965f-6d955aa7458c.png"></img></center></p>
+
+<h4 id="adding-sub-childs">Adding Sub-Childs</h4>
+
+<p>We can add childs to the child of the parent and we can set child for these themselves, for example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Item</span> <span class="n">subchild1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Item</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">&#34;Subchild1 Title&#34;</span><span class="o">,</span> <span class="s">&#34;Subchild1 Content&#34;</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+<span class="n">Item</span> <span class="n">subchild2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Item</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">&#34;Subchild2 Title&#34;</span><span class="o">,</span> <span class="s">&#34;Subchild2 Content&#34;</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+<span class="n">Item</span> <span class="n">subchild3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Item</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">&#34;Subchild3 Title&#34;</span><span class="o">,</span> <span class="s">&#34;Subchild3 Content&#34;</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+
+<span class="c1">//Some customization
+</span><span class="c1"></span><span class="n">subchild1</span><span class="o">.</span><span class="na">getTitle</span><span class="o">().</span><span class="na">setTextColor</span><span class="o">(</span><span class="n">Color</span><span class="o">.</span><span class="na">WHITE</span><span class="o">);</span>
+<span class="n">subchild2</span><span class="o">.</span><span class="na">getTitle</span><span class="o">().</span><span class="na">setTextColor</span><span class="o">(</span><span class="n">Color</span><span class="o">.</span><span class="na">WHITE</span><span class="o">);</span>
+<span class="n">subchild3</span><span class="o">.</span><span class="na">getTitle</span><span class="o">().</span><span class="na">setTextColor</span><span class="o">(</span><span class="n">Color</span><span class="o">.</span><span class="na">WHITE</span><span class="o">);</span>
+<span class="n">subchild1</span><span class="o">.</span><span class="na">getContent</span><span class="o">().</span><span class="na">setTextColor</span><span class="o">(</span><span class="n">Color</span><span class="o">.</span><span class="na">WHITE</span><span class="o">);</span>
+<span class="n">subchild2</span><span class="o">.</span><span class="na">getContent</span><span class="o">().</span><span class="na">setTextColor</span><span class="o">(</span><span class="n">Color</span><span class="o">.</span><span class="na">WHITE</span><span class="o">);</span>
+<span class="n">subchild3</span><span class="o">.</span><span class="na">getContent</span><span class="o">().</span><span class="na">setTextColor</span><span class="o">(</span><span class="n">Color</span><span class="o">.</span><span class="na">WHITE</span><span class="o">);</span>
+
+<span class="n">mindMappingView</span><span class="o">.</span><span class="na">addItem</span><span class="o">(</span><span class="n">subchild1</span><span class="o">,</span> <span class="n">child2</span><span class="o">,</span> <span class="n">200</span><span class="o">,</span> <span class="n">15</span><span class="o">,</span> <span class="n">ItemLocation</span><span class="o">.</span><span class="na">RIGHT</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+<span class="n">mindMappingView</span><span class="o">.</span><span class="na">addItem</span><span class="o">(</span><span class="n">subchild2</span><span class="o">,</span> <span class="n">child2</span><span class="o">,</span> <span class="n">200</span><span class="o">,</span> <span class="n">15</span><span class="o">,</span> <span class="n">ItemLocation</span><span class="o">.</span><span class="na">RIGHT</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+<span class="n">mindMappingView</span><span class="o">.</span><span class="na">addItem</span><span class="o">(</span><span class="n">subchild3</span><span class="o">,</span> <span class="n">child2</span><span class="o">,</span> <span class="n">200</span><span class="o">,</span> <span class="n">15</span><span class="o">,</span> <span class="n">ItemLocation</span><span class="o">.</span><span class="na">RIGHT</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><center><img src="https://user-images.githubusercontent.com/41321155/58803269-ac06b000-8617-11e9-937c-6dc1e6103afa.png"></img></center></p>
+
+<h4 id="adding-custom-connections">Adding Custom Connections</h4>
+
+<p>We can add a <code>CustomConnection</code> between any two items in the <code>mindMappingView</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//I will add a new subchild on the top of its parent (child2)
+</span><span class="c1"></span>
+<span class="n">Item</span> <span class="n">subchildToConnect</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Item</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">&#34;SubChildToConnect Title&#34;</span><span class="o">,</span> <span class="s">&#34;SubchildToConnect Content&#34;</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+<span class="n">mindMappingView</span><span class="o">.</span><span class="na">addItem</span><span class="o">(</span><span class="n">subchildToConnect</span><span class="o">,</span> <span class="n">child2</span><span class="o">,</span> <span class="n">200</span><span class="o">,</span> <span class="n">15</span><span class="o">,</span> <span class="n">ItemLocation</span><span class="o">.</span><span class="na">TOP</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+
+<span class="c1">//Now I will connect between the right of this new subchild and the right of child1
+</span><span class="c1"></span>
+<span class="n">mindMappingView</span><span class="o">.</span><span class="na">addCustomConnection</span><span class="o">(</span><span class="n">subchildToConnect</span><span class="o">,</span> <span class="n">ItemLocation</span><span class="o">.</span><span class="na">LEFT</span><span class="o">,</span> <span class="n">child1</span><span class="o">,</span> <span class="n">ItemLocation</span><span class="o">.</span><span class="na">RIGHT</span><span class="o">,</span> <span class="kc">null</span><span class="o">,</span> <span class="n">8</span><span class="o">,</span> <span class="s">&#34;#D81B60&#34;</span><span class="o">,</span> <span class="n">15</span><span class="o">,</span> <span class="n">20</span><span class="o">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><center><img src="https://user-images.githubusercontent.com/41321155/58803286-ba54cc00-8617-11e9-9929-2084f0c1f0f5.png"></img></center></p>
+
+<h4 id="handling-events">Handling events</h4>
+
+<p>All views are extended from other android default views so we can use the default listener, except the drag able <code>items</code>, we will need to use the library <code>OnItemClickedListener</code> as following:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">mindMappingView</span><span class="o">.</span><span class="na">setOnItemClicked</span><span class="o">(</span><span class="k">new</span> <span class="n">OnItemClicked</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">OnClick</span><span class="o">(</span><span class="n">Item</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">item</span> <span class="o">==</span> <span class="n">root</span><span class="o">){</span>
+            <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">&#34;You have clicked the root&#34;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">show</span><span class="o">();</span>
+        <span class="o">}</span><span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">item</span> <span class="o">==</span> <span class="n">child1</span><span class="o">){</span>
+            <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">&#34;You have clicked the Child1&#34;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">show</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">});</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="customization">Customization</h3>
+
+<p>As mentioned, the views are extended from default android views so we can customize them as we do for the default one. I will give an example of customizing the <code>subChildToConnect</code>:</p>
+
+<ul>
+<li>We create <code>sub_bg.xml</code>:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<span class="nt">&lt;shape</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span> <span class="na">android:shape=</span><span class="s">&#34;rectangle&#34;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;corners</span> <span class="na">android:radius=</span><span class="s">&#34;0dp&#34;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;gradient</span> <span class="na">android:startColor=</span><span class="s">&#34;@color/colorPrimary&#34;</span> <span class="na">android:endColor=</span><span class="s">&#34;@color/colorPrimaryDark&#34;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;stroke</span> <span class="na">android:color=</span><span class="s">&#34;#FFEB3B&#34;</span> <span class="na">android:dashWidth=</span><span class="s">&#34;10dp&#34;</span> <span class="na">android:width=</span><span class="s">&#34;3dp&#34;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/shape&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li>Now we do the customization before adding the child and then creating its custom connection:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//I will add a new subchild on the top of its parent (child2)
+</span><span class="c1"></span><span class="n">Item</span> <span class="n">subchildToConnect</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Item</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">&#34;SubChildToConnect Title&#34;</span><span class="o">,</span> <span class="s">&#34;SubchildToConnect Content&#34;</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+
+<span class="c1">//We customize
+</span><span class="c1"></span><span class="n">subchildToConnect</span><span class="o">.</span><span class="na">setBackgroundResource</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">drawable</span><span class="o">.</span><span class="na">sub_bg</span><span class="o">);</span>
+<span class="n">subchildToConnect</span><span class="o">.</span><span class="na">getTitle</span><span class="o">().</span><span class="na">setTextColor</span><span class="o">(</span><span class="n">Color</span><span class="o">.</span><span class="na">WHITE</span><span class="o">);</span>
+<span class="n">subchildToConnect</span><span class="o">.</span><span class="na">getContent</span><span class="o">().</span><span class="na">setTextColor</span><span class="o">(</span><span class="n">Color</span><span class="o">.</span><span class="na">CYAN</span><span class="o">);</span>
+<span class="n">mindMappingView</span><span class="o">.</span><span class="na">addItem</span><span class="o">(</span><span class="n">subchildToConnect</span><span class="o">,</span> <span class="n">child2</span><span class="o">,</span> <span class="n">400</span><span class="o">,</span> <span class="n">15</span><span class="o">,</span> <span class="n">ItemLocation</span><span class="o">.</span><span class="na">TOP</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+
+<span class="c1">//Now I will connect between the right of this new subchild and the right of child1
+</span><span class="c1"></span><span class="n">mindMappingView</span><span class="o">.</span><span class="na">addCustomConnection</span><span class="o">(</span><span class="n">subchildToConnect</span><span class="o">,</span> <span class="n">ItemLocation</span><span class="o">.</span><span class="na">LEFT</span><span class="o">,</span> <span class="n">child1</span><span class="o">,</span> <span class="n">ItemLocation</span><span class="o">.</span><span class="na">RIGHT</span><span class="o">,</span> <span class="kc">null</span><span class="o">,</span> <span class="n">8</span><span class="o">,</span> <span class="s">&#34;#D81B60&#34;</span><span class="o">,</span> <span class="n">15</span><span class="o">,</span> <span class="n">20</span><span class="o">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><center><img src="https://user-images.githubusercontent.com/41321155/58803316-d193b980-8617-11e9-8315-c2c2183244c4.png"></img></center></p>
+
+<!--adsense-->
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Jagar</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-06-03
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/hierarchy/">Hierarchy</a>
+          <a href="/tags/tree/">Tree</a>
+          <a href="/tags/mind-mapping/">Mind Mapping</a>
+          <a href="/tags/library/">Library</a>
+          <a href="/tags/canvas/">Canvas</a>
+          <a href="/tags/mindo/">Mindo</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/opencamera2window/">
+            <span class="next-text nav-default">How to use camera and capture photos in your app without using any other apps in Android Studio (using camera2)</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'jagar-1';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:jagar.yousef@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/JagarYousef" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="#" class="iconfont icon-github" title="github"></a>
+  <a href="https://jagar.me/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Jagar</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-140942950-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>
