@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>How to open an app using a dialer call in Android Studio - Jagar</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Jagar" /><meta name="description" content="We will explain in few easy steps how to keep your app&amp;rsquo;s icon hidden in the main menu, and how to open it only using a specific dialer code in the default android dialer. You can also let the user specify his own dialer number to open your app.
+" /><meta name="keywords" content="Java, Android, Tutorials" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://jagar.me/post/open-an-app-using-dialer-in-android/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="How to open an app using a dialer call in Android Studio" />
+<meta property="og:description" content="We will explain in few easy steps how to keep your app&rsquo;s icon hidden in the main menu, and how to open it only using a specific dialer code  in the default android dialer. You can also let the user specify his own dialer number to open your app." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jagar.me/post/open-an-app-using-dialer-in-android/" />
+<meta property="article:published_time" content="2019-06-09T08:51:25&#43;03:00"/>
+<meta property="article:modified_time" content="2019-06-09T08:51:25&#43;03:00"/>
+
+<meta itemprop="name" content="How to open an app using a dialer call in Android Studio">
+<meta itemprop="description" content="We will explain in few easy steps how to keep your app&rsquo;s icon hidden in the main menu, and how to open it only using a specific dialer code  in the default android dialer. You can also let the user specify his own dialer number to open your app.">
+
+
+<meta itemprop="datePublished" content="2019-06-09T08:51:25&#43;03:00" />
+<meta itemprop="dateModified" content="2019-06-09T08:51:25&#43;03:00" />
+<meta itemprop="wordCount" content="620">
+
+
+
+<meta itemprop="keywords" content="Dialer,Android Security,Hidden Android App,Broadcastreciever,Android Spy," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to open an app using a dialer call in Android Studio"/>
+<meta name="twitter:description" content="We will explain in few easy steps how to keep your app&rsquo;s icon hidden in the main menu, and how to open it only using a specific dialer code  in the default android dialer. You can also let the user specify his own dialer number to open your app."/>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1293903967179873",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Jagar</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Jagar</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">How to open an app using a dialer call in Android Studio</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-06-09 </span>
+        <div class="post-category">
+            <a href="/categories/android/"> Android </a>
+            <a href="/categories/java/"> Java </a>
+            <a href="/categories/android-studio/"> Android Studio </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#intro">Intro</a></li>
+<li><a href="#set-up-a-broadcastreciever">Set up a Broadcastreciever</a></li>
+<li><a href="#hide-the-android-app-icon">Hide the android app icon</a></li>
+<li><a href="#result">Result</a></li>
+<li><a href="#notes">Notes</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>We will explain in few easy steps how to keep your app&rsquo;s icon hidden in the main menu, and how to open it only using a specific dialer code  in the default android dialer. You can also let the user specify his own dialer number to open your app.</p>
+
+<!--adsense-->
+
+<h3 id="intro">Intro</h3>
+
+<p>Sometimes you need to keep your app&rsquo;s icon hidden from the main menu (not the apps list in settings) and only let the user open its launcher activity (or any other specified activity) using the dialer by calling a specific code just like the case when some users using the dialer codes to get some information about their device.</p>
+
+<p>So in this tutorial we will create a simple app that has a hidden icon and can be accessed only by calling a dialer code, and then explain how to let the user him/herself set this code.</p>
+
+<h3 id="set-up-a-broadcastreciever">Set up a Broadcastreciever</h3>
+
+<p>We will watch the outgoing called numbers in the dialer and start our <code>MainActivity.java</code> when our chosen code is dialed.</p>
+
+<ol>
+<li>We will create a new android project with an empty launcher activity (<code>MainActivity.java</code>) and its layout will only contains a welcome message.</li>
+<li>We create <code>MyBroadCastReciever.java</code> class the extends <code>BroadCastReciever</code> and will have an intent to open the <code>MainAcitivty.java</code> if the dialed code matches our one:</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyBroadCastReciever</span> <span class="kd">extends</span> <span class="n">BroadcastReceiver</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onReceive</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">intent</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="n">String</span> <span class="n">ourCode</span> <span class="o">=</span> <span class="s">&#34;*1234#&#34;</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">dialedNumber</span> <span class="o">=</span> <span class="n">getResultData</span><span class="o">();</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">dialedNumber</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">ourCode</span><span class="o">)){</span>
+
+            <span class="c1">// My app will bring up, so cancel the dialer broadcast
+</span><span class="c1"></span>            <span class="n">setResultData</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+
+            <span class="c1">//Intent to launch MainActivity
+</span><span class="c1"></span>            <span class="n">Intent</span> <span class="n">intent_to_mainActivity</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">MainActivity</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+            <span class="n">context</span><span class="o">.</span><span class="na">startActivity</span><span class="o">(</span><span class="n">intent_to_mainActivity</span><span class="o">);</span>
+
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li><p>We announce our receiver in the <code>application</code> tag in <code>AndroidManifest.xml</code></p></li>
+
+<li><p>And we need to use <code>PROCESS_OUTGOING_CALLS permission</code>:</p></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<span class="nt">&lt;manifest</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+    <span class="na">package=</span><span class="s">&#34;me.jagar.myspyapp&#34;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.PROCESS_OUTGOING_CALLS&#34;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;application</span>
+        <span class="na">android:allowBackup=</span><span class="s">&#34;true&#34;</span>
+        <span class="na">android:icon=</span><span class="s">&#34;@mipmap/ic_launcher&#34;</span>
+        <span class="na">android:label=</span><span class="s">&#34;@string/app_name&#34;</span>
+        <span class="na">android:roundIcon=</span><span class="s">&#34;@mipmap/ic_launcher_round&#34;</span>
+        <span class="na">android:supportsRtl=</span><span class="s">&#34;true&#34;</span>
+        <span class="na">android:theme=</span><span class="s">&#34;@style/AppTheme&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;activity</span> <span class="na">android:name=</span><span class="s">&#34;.MainActivity&#34;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;intent-filter&gt;</span>
+                <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&#34;android.intent.action.MAIN&#34;</span> <span class="nt">/&gt;</span>
+
+                <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&#34;android.intent.category.LAUNCHER&#34;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/intent-filter&gt;</span>
+        <span class="nt">&lt;/activity&gt;</span>
+        <span class="nt">&lt;receiver</span> <span class="na">android:name=</span><span class="s">&#34;.MyBroadCastReciever&#34;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;intent-filter&gt;</span>
+                <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&#34;android.intent.action.NEW_OUTGOING_CALL&#34;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/intent-filter&gt;</span>
+        <span class="nt">&lt;/receiver&gt;</span>
+    <span class="nt">&lt;/application&gt;</span>
+
+<span class="nt">&lt;/manifest&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>We also need to check the permission programmatically so we will check if the permission is granted in <code>onCreate()</code></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="k">if</span> <span class="o">(</span><span class="n">ContextCompat</span><span class="o">.</span><span class="na">checkSelfPermission</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">PROCESS_OUTGOING_CALLS</span><span class="o">)</span>
+<span class="o">!=</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">){</span>
+    <span class="n">ActivityCompat</span><span class="o">.</span><span class="na">requestPermissions</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span> <span class="o">{</span><span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">PROCESS_OUTGOING_CALLS</span><span class="o">},</span> <span class="n">permission_calls</span><span class="o">);</span>
+<span class="o">}</span><span class="k">else</span><span class="o">{</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>Then check the results of the permission request:</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">onRequestPermissionsResult</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="nd">@NonNull</span> <span class="n">String</span><span class="o">[]</span> <span class="n">permissions</span><span class="o">,</span> <span class="nd">@NonNull</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">grantResults</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">.</span><span class="na">onRequestPermissionsResult</span><span class="o">(</span><span class="n">requestCode</span><span class="o">,</span> <span class="n">permissions</span><span class="o">,</span> <span class="n">grantResults</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">requestCode</span> <span class="o">==</span> <span class="n">permission_calls</span><span class="o">){</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">grantResults</span><span class="o">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="n">0</span> <span class="o">&amp;&amp;</span> <span class="n">grantResults</span><span class="o">[</span><span class="n">0</span><span class="o">]</span> <span class="o">==</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">){</span>
+        <span class="o">}</span><span class="k">else</span><span class="o">{</span>
+            <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">&#34;Premission needed&#34;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">show</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="hide-the-android-app-icon">Hide the android app icon</h3>
+
+<ol>
+<li>In this example I will hide the icon in <code>onStop()</code> of the <code>MainActivity.java</code>:</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">PackageManager</span> <span class="n">packageManager</span> <span class="o">=</span> <span class="n">getPackageManager</span><span class="o">();</span>
+<span class="n">ComponentName</span> <span class="n">componentName</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ComponentName</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="n">me</span><span class="o">.</span><span class="na">jagar</span><span class="o">.</span><span class="na">myspyapp</span><span class="o">.</span><span class="na">MainActivity</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="n">packageManager</span><span class="o">.</span><span class="na">setComponentEnabledSetting</span><span class="o">(</span><span class="n">componentName</span><span class="o">,</span><span class="n">PackageManager</span><span class="o">.</span><span class="na">COMPONENT_ENABLED_STATE_DISABLED</span><span class="o">,</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">DONT_KILL_APP</span><span class="o">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>And I will unhide it before the intent in the <code>MyBroadCastReciever</code> otherwise we will get  <code>AppNotFoundException</code> if we opened the activity without unhiding the app icon.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">PackageManager</span> <span class="n">packageManager</span> <span class="o">=</span> <span class="n">getPackageManager</span><span class="o">();</span>
+<span class="n">ComponentName</span> <span class="n">componentName</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ComponentName</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">me</span><span class="o">.</span><span class="na">jagar</span><span class="o">.</span><span class="na">myspyapp</span><span class="o">.</span><span class="na">MainActivity</span><span class="o">.</span><span class="na">class</span><span class="o">);</span> 
+<span class="n">packageManager</span><span class="o">.</span><span class="na">setComponentEnabledSetting</span><span class="o">(</span><span class="n">componentName</span><span class="o">,</span><span class="n">PackageManager</span><span class="o">.</span><span class="na">COMPONENT_ENABLED_STATE_ENABLED</span><span class="o">,</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">DONT_KILL_APP</span><span class="o">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>(Optionally) we can create a method that check if the icon is visible or not, and it could be useful in more complicated implementations:</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">isLauncherIconVisible</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">ComponentName</span> <span class="n">componentName</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ComponentName</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">me</span><span class="o">.</span><span class="na">jagar</span><span class="o">.</span><span class="na">myspyapp</span><span class="o">.</span><span class="na">MainActivity</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+    <span class="kt">int</span> <span class="n">enabledSetting</span> <span class="o">=</span> <span class="n">getPackageManager</span><span class="o">().</span><span class="na">getComponentEnabledSetting</span><span class="o">(</span><span class="n">componentName</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">enabledSetting</span> <span class="o">!=</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">COMPONENT_ENABLED_STATE_DISABLED</span><span class="o">;</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="result">Result</h3>
+
+<p><img src="https://user-images.githubusercontent.com/41321155/59177179-f16d3500-8b63-11e9-82ed-7fc138306912.gif"  width="300" height="500"> </img></p>
+
+<h3 id="notes">Notes</h3>
+
+<ul>
+<li>Hiding the icon in <code>onStop()</code> is really not a good idea and this should be customized depending on your app&rsquo;s approach.</li>
+<li>Hiding the icon is problematic in the debugging because android studio gives <code>NotFoundException</code> when the app icon is hided.</li>
+</ul>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Jagar</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-06-09
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/dialer/">Dialer</a>
+          <a href="/tags/android-security/">Android Security</a>
+          <a href="/tags/hidden-android-app/">Hidden Android App</a>
+          <a href="/tags/broadcastreciever/">Broadcastreciever</a>
+          <a href="/tags/android-spy/">Android Spy</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/mindmappingviewandroid/">
+            <span class="next-text nav-default">How to create Mind Mapping View (Hierarchy view) in Android Studio Easily</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'jagar-1';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:jagar.yousef@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/JagarYousef" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="#" class="iconfont icon-github" title="github"></a>
+  <a href="https://jagar.me/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Jagar</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-140942950-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

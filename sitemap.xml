@@ -3,24 +3,85 @@
   
   <url>
     <loc>https://jagar.me/categories/android/</loc>
-    <lastmod>2019-06-03T10:39:20+03:00</lastmod>
+    <lastmod>2019-06-09T08:51:25+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/android-security/</loc>
+    <lastmod>2019-06-09T08:51:25+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/android-spy/</loc>
+    <lastmod>2019-06-09T08:51:25+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jagar.me/categories/android-studio/</loc>
-    <lastmod>2019-06-03T10:39:20+03:00</lastmod>
+    <lastmod>2019-06-09T08:51:25+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jagar.me/tags/canvas/</loc>
-    <lastmod>2019-06-03T10:39:20+03:00</lastmod>
+    <loc>https://jagar.me/tags/broadcastreciever/</loc>
+    <lastmod>2019-06-09T08:51:25+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jagar.me/categories/</loc>
+    <lastmod>2019-06-09T08:51:25+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/dialer/</loc>
+    <lastmod>2019-06-09T08:51:25+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/hidden-android-app/</loc>
+    <lastmod>2019-06-09T08:51:25+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/post/open-an-app-using-dialer-in-android/</loc>
+    <lastmod>2019-06-09T08:51:25+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/</loc>
+    <lastmod>2019-06-09T08:51:25+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/categories/java/</loc>
+    <lastmod>2019-06-09T08:51:25+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/post/</loc>
+    <lastmod>2019-06-09T08:51:25+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/</loc>
+    <lastmod>2019-06-09T08:51:25+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/canvas/</loc>
     <lastmod>2019-06-03T10:39:20+03:00</lastmod>
     <priority>0</priority>
   </url>
@@ -39,18 +100,6 @@
   </url>
   
   <url>
-    <loc>https://jagar.me/</loc>
-    <lastmod>2019-06-03T10:39:20+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jagar.me/categories/java/</loc>
-    <lastmod>2019-06-03T10:39:20+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://jagar.me/tags/library/</loc>
     <lastmod>2019-06-03T10:39:20+03:00</lastmod>
     <priority>0</priority>
@@ -64,18 +113,6 @@
   
   <url>
     <loc>https://jagar.me/tags/mindo/</loc>
-    <lastmod>2019-06-03T10:39:20+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jagar.me/post/</loc>
-    <lastmod>2019-06-03T10:39:20+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jagar.me/tags/</loc>
     <lastmod>2019-06-03T10:39:20+03:00</lastmod>
     <priority>0</priority>
   </url>
@@ -136,13 +173,13 @@
   </url>
   
   <url>
-    <loc>https://jagar.me/categories/javafx/</loc>
+    <loc>https://jagar.me/tags/javafx/</loc>
     <lastmod>2019-05-25T09:44:58+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jagar.me/tags/javafx/</loc>
+    <loc>https://jagar.me/categories/javafx/</loc>
     <lastmod>2019-05-25T09:44:58+03:00</lastmod>
     <priority>0</priority>
   </url>
