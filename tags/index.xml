@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Jagar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Jun 2019 08:51:25 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 03 Aug 2019 21:21:38 +0300</lastBuildDate>
     
 	<atom:link href="https://jagar.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Gradle</title>
+      <link>https://jagar.me/tags/gradle/</link>
+      <pubDate>Sat, 03 Aug 2019 21:21:38 +0300</pubDate>
+      
+      <guid>https://jagar.me/tags/gradle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Intellij</title>
+      <link>https://jagar.me/tags/intellij/</link>
+      <pubDate>Sat, 03 Aug 2019 21:21:38 +0300</pubDate>
+      
+      <guid>https://jagar.me/tags/intellij/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UTF-8</title>
+      <link>https://jagar.me/tags/utf-8/</link>
+      <pubDate>Sat, 03 Aug 2019 21:21:38 +0300</pubDate>
+      
+      <guid>https://jagar.me/tags/utf-8/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Android Security</title>

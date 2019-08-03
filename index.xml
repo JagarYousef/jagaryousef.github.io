@@ -6,10 +6,19 @@
     <description>Recent content on Jagar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Jun 2019 08:51:25 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 03 Aug 2019 21:21:38 +0300</lastBuildDate>
     
 	<atom:link href="https://jagar.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to create a gradle project with javaFX in intellij</title>
+      <link>https://jagar.me/post/how_to_create_a_gradle_project_with_javafx_in_intellij/</link>
+      <pubDate>Sat, 03 Aug 2019 21:21:38 +0300</pubDate>
+      
+      <guid>https://jagar.me/post/how_to_create_a_gradle_project_with_javafx_in_intellij/</guid>
+      <description>&lt;p&gt;We will in few steps how we can work on javaFX within a gradle project in the new intellij build 2019.2 which may apply other builds too.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>How to open an app using a dialer call in Android Studio</title>

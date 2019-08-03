@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JavaFX on Jagar</title>
-    <link>https://jagar.me/categories/javafx/</link>
-    <description>Recent content in JavaFX on Jagar</description>
+    <title>UTF-8 on Jagar</title>
+    <link>https://jagar.me/tags/utf-8/</link>
+    <description>Recent content in UTF-8 on Jagar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 03 Aug 2019 21:21:38 +0300</lastBuildDate>
     
-	<atom:link href="https://jagar.me/categories/javafx/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jagar.me/tags/utf-8/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://jagar.me/post/how_to_create_a_gradle_project_with_javafx_in_intellij/</guid>
       <description>&lt;p&gt;We will in few steps how we can work on javaFX within a gradle project in the new intellij build 2019.2 which may apply other builds too.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>The easiest and best way to pass data (arguments) between controllers in JavaFX</title>
-      <link>https://jagar.me/post/passingdatainjavafx/</link>
-      <pubDate>Sat, 25 May 2019 09:44:58 +0300</pubDate>
-      
-      <guid>https://jagar.me/post/passingdatainjavafx/</guid>
-      <description>&lt;p&gt;Most of programs in this world would need to pass different data and arguments between the different layouts and screens, so we will explain the easiest way to have this done in JavaFX in this tutorial.&lt;/p&gt;</description>
     </item>
     
   </channel>
