@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on Jagar</title>
+    <link>https://jagar.me/tags/android/</link>
+    <description>Recent content in Android on Jagar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 Sep 2019 00:04:44 +0300</lastBuildDate>
+    
+	<atom:link href="https://jagar.me/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How_to_create_skeleton_loading_view_for_any_recyclerVie_or_view</title>
+      <link>https://jagar.me/post/how_to_create_skeleton_loading_view_for_any_recyclervie_or_view/</link>
+      <pubDate>Sun, 01 Sep 2019 00:04:44 +0300</pubDate>
+      
+      <guid>https://jagar.me/post/how_to_create_skeleton_loading_view_for_any_recyclervie_or_view/</guid>
+      <description>&lt;p&gt;In these few steps we will find out how to implement the Skeleton View for the views and the recycler views in Android which is used these days in some of the most famous apps like the loading views in Facebook app.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Jagar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 03 Aug 2019 21:21:38 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 01 Sep 2019 00:04:44 +0300</lastBuildDate>
     
 	<atom:link href="https://jagar.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How_to_create_skeleton_loading_view_for_any_recyclerVie_or_view</title>
+      <link>https://jagar.me/post/how_to_create_skeleton_loading_view_for_any_recyclervie_or_view/</link>
+      <pubDate>Sun, 01 Sep 2019 00:04:44 +0300</pubDate>
+      
+      <guid>https://jagar.me/post/how_to_create_skeleton_loading_view_for_any_recyclervie_or_view/</guid>
+      <description>&lt;p&gt;In these few steps we will find out how to implement the Skeleton View for the views and the recycler views in Android which is used these days in some of the most famous apps like the loading views in Facebook app.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>How to create a gradle project with javaFX in intellij</title>
