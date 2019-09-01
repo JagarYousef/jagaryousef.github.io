@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PHP Slim framework on Jagar</title>
+    <link>https://jagar.me/tags/php-slim-framework/</link>
+    <description>Recent content in PHP Slim framework on Jagar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 Sep 2019 08:57:46 +0300</lastBuildDate>
+    
+	<atom:link href="https://jagar.me/tags/php-slim-framework/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android retrofit with Python API example</title>
+      <link>https://jagar.me/post/android_retrofit_with_python_api_example/</link>
+      <pubDate>Sun, 01 Sep 2019 08:57:46 +0300</pubDate>
+      
+      <guid>https://jagar.me/post/android_retrofit_with_python_api_example/</guid>
+      <description>&lt;p&gt;In this tutorial we will demonstrate how to connect an android app with a Python 3.x based RESTful API using retrofit 2 and PHP Slim framework.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

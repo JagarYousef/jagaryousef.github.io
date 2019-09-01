@@ -2,13 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jagar.me/tags/android/</loc>
-    <lastmod>2019-09-01T00:04:44+03:00</lastmod>
+    <loc>https://jagar.me/categories/android/</loc>
+    <lastmod>2019-09-01T08:57:46+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://jagar.me/post/android_retrofit_with_python_api_example/</loc>
+    <lastmod>2019-09-01T08:57:46+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://jagar.me/categories/</loc>
+    <lastmod>2019-09-01T08:57:46+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/</loc>
+    <lastmod>2019-09-01T08:57:46+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/categories/java/</loc>
+    <lastmod>2019-09-01T08:57:46+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/php-slim-framework/</loc>
+    <lastmod>2019-09-01T08:57:46+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/post/</loc>
+    <lastmod>2019-09-01T08:57:46+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/python-api/</loc>
+    <lastmod>2019-09-01T08:57:46+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/categories/restful-apis/</loc>
+    <lastmod>2019-09-01T08:57:46+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/retrofit-2/</loc>
+    <lastmod>2019-09-01T08:57:46+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/</loc>
+    <lastmod>2019-09-01T08:57:46+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/exec/</loc>
+    <lastmod>2019-09-01T08:57:46+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/android/</loc>
     <lastmod>2019-09-01T00:04:44+03:00</lastmod>
     <priority>0</priority>
   </url>
@@ -21,30 +88,6 @@
   </url>
   
   <url>
-    <loc>https://jagar.me/</loc>
-    <lastmod>2019-09-01T00:04:44+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jagar.me/categories/java/</loc>
-    <lastmod>2019-09-01T00:04:44+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jagar.me/categories/javafx/</loc>
-    <lastmod>2019-09-01T00:04:44+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jagar.me/post/</loc>
-    <lastmod>2019-09-01T00:04:44+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://jagar.me/tags/recyclerview/</loc>
     <lastmod>2019-09-01T00:04:44+03:00</lastmod>
     <priority>0</priority>
@@ -52,12 +95,6 @@
   
   <url>
     <loc>https://jagar.me/tags/skeletonview/</loc>
-    <lastmod>2019-09-01T00:04:44+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jagar.me/tags/</loc>
     <lastmod>2019-09-01T00:04:44+03:00</lastmod>
     <priority>0</priority>
   </url>
@@ -88,14 +125,14 @@
   </url>
   
   <url>
-    <loc>https://jagar.me/tags/utf-8/</loc>
+    <loc>https://jagar.me/categories/javafx/</loc>
     <lastmod>2019-08-03T21:21:38+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jagar.me/categories/android/</loc>
-    <lastmod>2019-06-09T08:51:25+03:00</lastmod>
+    <loc>https://jagar.me/tags/utf-8/</loc>
+    <lastmod>2019-08-03T21:21:38+03:00</lastmod>
     <priority>0</priority>
   </url>
   
