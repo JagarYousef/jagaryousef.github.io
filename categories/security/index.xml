@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on Jagar</title>
+    <link>https://jagar.me/categories/security/</link>
+    <description>Recent content in Security on Jagar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 02 Sep 2019 09:23:30 +0300</lastBuildDate>
+    
+	<atom:link href="https://jagar.me/categories/security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to create a Firebase login usb</title>
+      <link>https://jagar.me/post/how_to_create_firebase_login_usb/</link>
+      <pubDate>Mon, 02 Sep 2019 09:23:30 +0300</pubDate>
+      
+      <guid>https://jagar.me/post/how_to_create_firebase_login_usb/</guid>
+      <description>&lt;p&gt;We will handle the Firebase admin SDK private key in a USB drive then login with it, once the USB is connected using the admin SDK for Java documentations.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to open an app using a dialer call in Android Studio</title>
+      <link>https://jagar.me/post/open-an-app-using-dialer-in-android/</link>
+      <pubDate>Sun, 09 Jun 2019 08:51:25 +0300</pubDate>
+      
+      <guid>https://jagar.me/post/open-an-app-using-dialer-in-android/</guid>
+      <description>&lt;p&gt;We will explain in few easy steps how to keep your app&amp;rsquo;s icon hidden in the main menu, and how to open it only by dialing a specific code  in the default android dialer. You can also let the user specify his own dialer number to open your app.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
