@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>UI on Jagar</title>
-    <link>https://jagar.me/tags/ui/</link>
-    <description>Recent content in UI on Jagar</description>
+    <title>Chat on Jagar</title>
+    <link>https://jagar.me/tags/chat/</link>
+    <description>Recent content in Chat on Jagar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 15 Nov 2019 18:39:32 +0300</lastBuildDate>
     
-	<atom:link href="https://jagar.me/tags/ui/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jagar.me/tags/chat/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://jagar.me/post/firestore_ui_pagination_for_chatting/</guid>
       <description>&lt;p&gt;The default behaviour of the recyclerview in Android is adding the new item to the top of its list when this is not the best practice for a chatting UI that needs to add a new item to the bottom of the list then scroll to the last item (the newly added), so in this short tutorial we will show how we can make this possible in two simple steps.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to create a skeleton loading view for any recyclerView or view in Android</title>
-      <link>https://jagar.me/post/how_to_create_skeleton_loading_view_for_any_recyclervie_or_view/</link>
-      <pubDate>Sun, 01 Sep 2019 00:04:44 +0300</pubDate>
-      
-      <guid>https://jagar.me/post/how_to_create_skeleton_loading_view_for_any_recyclervie_or_view/</guid>
-      <description>&lt;p&gt;In these few steps we will find out how to implement the Skeleton View for the views and the recycler views in Android which is used these days in some of the most famous apps like the loading views in Facebook app.&lt;/p&gt;</description>
     </item>
     
   </channel>

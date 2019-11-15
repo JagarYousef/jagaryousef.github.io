@@ -6,10 +6,19 @@
     <description>Recent content in Android on Jagar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Sep 2019 08:57:46 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 15 Nov 2019 18:39:32 +0300</lastBuildDate>
     
 	<atom:link href="https://jagar.me/categories/android/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Firestore UI Pagination for chatting</title>
+      <link>https://jagar.me/post/firestore_ui_pagination_for_chatting/</link>
+      <pubDate>Fri, 15 Nov 2019 18:39:32 +0300</pubDate>
+      
+      <guid>https://jagar.me/post/firestore_ui_pagination_for_chatting/</guid>
+      <description>&lt;p&gt;The default behaviour of the recyclerview in Android is adding the new item to the top of its list when this is not the best practice for a chatting UI that needs to add a new item to the bottom of the list then scroll to the last item (the newly added), so in this short tutorial we will show how we can make this possible in two simple steps.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Android retrofit with Python API example</title>
