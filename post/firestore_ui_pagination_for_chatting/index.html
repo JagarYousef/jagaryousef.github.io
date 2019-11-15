@@ -52,7 +52,7 @@
 
 <meta itemprop="datePublished" content="2019-11-15T18:39:32&#43;03:00" />
 <meta itemprop="dateModified" content="2019-11-15T18:39:32&#43;03:00" />
-<meta itemprop="wordCount" content="258">
+<meta itemprop="wordCount" content="260">
 
 
 
@@ -198,12 +198,16 @@
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-java" data-lang="java"><span class="n">adapter</span><span class="o">.</span><span class="na">registerAdapterDataObserver</span><span class="o">(</span><span class="k">new</span> <span class="n">RecyclerView</span><span class="o">.</span><span class="na">AdapterDataObserver</span><span class="o">()</span> <span class="o">{</span>    
     <span class="nd">@Override</span>    
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onItemRangeInserted</span><span class="o">(</span><span class="kt">int</span> <span class="n">positionStart</span><span class="o">,</span> <span class="kt">int</span> <span class="n">itemCount</span><span class="o">)</span> <span class="o">{</span>        <span class="n">linearLayoutManager</span><span class="o">.</span><span class="na">smoothScrollToPosition</span><span class="o">(</span><span class="n">rv_conversation</span><span class="o">,</span> <span class="kc">null</span><span class="o">,</span> <span class="n">0</span><span class="o">);</span>  <span class="c1">//It will scroll to position 0 which is the last added item at the bottom of the recyclerview, you can change it to any position you want.     
-</span><span class="c1"></span><span class="o">}});</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onItemRangeInserted</span><span class="o">(</span><span class="kt">int</span> <span class="n">positionStart</span><span class="o">,</span> <span class="kt">int</span> <span class="n">itemCount</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">linearLayoutManager</span><span class="o">.</span><span class="na">smoothScrollToPosition</span><span class="o">(</span><span class="n">rv_conversation</span><span class="o">,</span> <span class="kc">null</span><span class="o">,</span> <span class="n">0</span><span class="o">);</span>  <span class="c1">//It will scroll to position 0 which is the last added item at the bottom of the recyclerview, you can change it to any position you want. 
+</span><span class="c1"></span>        
+<span class="o">}});</span>
 <span class="n">rv_conversation</span><span class="o">.</span><span class="na">setAdapter</span><span class="o">(</span><span class="n">adapter</span><span class="o">);</span></code></pre></td></tr></table>
 </div>
 </div>
