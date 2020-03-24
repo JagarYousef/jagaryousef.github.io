@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Jagar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 Nov 2019 18:39:32 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2020 12:42:11 +0200</lastBuildDate>
     
 	<atom:link href="https://jagar.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Paraphraser Privacy Policy</title>
+      <link>https://jagar.me/post/paraphraser_privacy_policy/</link>
+      <pubDate>Tue, 24 Mar 2020 12:42:11 +0200</pubDate>
+      
+      <guid>https://jagar.me/post/paraphraser_privacy_policy/</guid>
+      <description>Privacy Policy Jagar Yousef built the Paraphraser app as an Ad Supported app. This SERVICE is provided by Jagar Yousef at no cost and is intended for use as is.
+This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.
+If you choose to use my Service, then you agree to the collection and use of information in relation to this policy.</description>
+    </item>
     
     <item>
       <title>Firestore UI Pagination for chatting</title>
