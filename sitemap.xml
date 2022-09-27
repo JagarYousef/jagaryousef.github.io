@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jagar.me/categories/</loc>
+    <lastmod>2022-09-28T08:00:17+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/check-host/</loc>
+    <lastmod>2022-09-28T00:32:32+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/post/how_to_check_ip_python/</loc>
+    <lastmod>2022-09-28T00:32:32+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/</loc>
+    <lastmod>2022-09-28T08:00:17+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/ping-ip/</loc>
+    <lastmod>2022-09-28T00:32:32+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/post/</loc>
+    <lastmod>2022-09-28T08:00:17+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/python/</loc>
+    <lastmod>2022-09-28T00:32:32+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/categories/python/</loc>
+    <lastmod>2022-09-28T00:32:32+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jagar.me/tags/</loc>
+    <lastmod>2022-09-28T08:00:17+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://jagar.me/tags/android/</loc>
     <lastmod>2022-09-28T08:00:17+03:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -10,13 +73,6 @@
   
   <url>
     <loc>https://jagar.me/categories/android/</loc>
-    <lastmod>2022-09-28T08:00:17+03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://jagar.me/categories/</loc>
     <lastmod>2022-09-28T08:00:17+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -44,13 +100,6 @@
   </url>
   
   <url>
-    <loc>https://jagar.me/</loc>
-    <lastmod>2022-09-28T08:00:17+03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://jagar.me/categories/java/</loc>
     <lastmod>2022-09-28T08:00:17+03:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -58,21 +107,7 @@
   </url>
   
   <url>
-    <loc>https://jagar.me/post/</loc>
-    <lastmod>2022-09-28T08:00:17+03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://jagar.me/tags/recyclerview/</loc>
-    <lastmod>2022-09-28T08:00:17+03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://jagar.me/tags/</loc>
     <lastmod>2022-09-28T08:00:17+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

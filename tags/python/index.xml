@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Jagar</title>
+    <link>https://jagar.me/tags/python/</link>
+    <description>Recent content in Python on Jagar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 28 Sep 2022 00:32:32 +0300</lastBuildDate><atom:link href="https://jagar.me/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to check an IP in python</title>
+      <link>https://jagar.me/post/how_to_check_ip_python/</link>
+      <pubDate>Wed, 28 Sep 2022 00:32:32 +0300</pubDate>
+      
+      <guid>https://jagar.me/post/how_to_check_ip_python/</guid>
+      <description>&lt;p&gt;If you are looking for the quickest, most efficient and proper way to ping or check IPs using Python 3 so this short tutorial is for you. This will work for both online or local hosts&amp;rsquo; IPs, it just use the default &lt;code&gt;ping&lt;/code&gt; command of the OS, so it doesn&amp;rsquo;t need any external module and it is still the most efficient way to do the task.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
