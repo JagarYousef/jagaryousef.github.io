@@ -149,7 +149,8 @@
   <ul>
     <li>
       <ul>
-        <li></li>
+        <li><a href="#force-the-recyclerview-to-add-the-new-items-to-the-bottom">Force the recyclerview to add the new items to the bottom</a></li>
+        <li><a href="#make-the-recycler-view-scroll-to-the-bottom-when-the-new-item-is-added">Make the recycler view scroll to the bottom when the new item is added</a></li>
       </ul>
     </li>
   </ul>
@@ -158,7 +159,7 @@
 </div>
     <div class="post-content">
       <p>The default behaviour of the recyclerview in Android is adding the new item to the top of its list when this is not the best practice for a chatting UI that needs to add a new item to the bottom of the list then scroll to the last item (the newly added), so in this short tutorial we will show how we can make this possible in two simple steps.</p>
-<h4 id="force-the-recyclerview-to-add-the-new-items-to-the-bottom">Force the recyclerview to add the new items to the bottom</h4>
+<h3 id="force-the-recyclerview-to-add-the-new-items-to-the-bottom">Force the recyclerview to add the new items to the bottom</h3>
 <p>We can do this by adding a custom layout manager to the recyclerview as following:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -176,7 +177,7 @@
 </span></span><span class="line"><span class="cl"><span class="n">rv_conversation</span><span class="o">.</span><span class="na">setLayoutManager</span><span class="o">(</span><span class="n">linearLayoutManager</span><span class="o">);</span> <span class="c1">//rv_conversation is our chat recycler view
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="make-the-recycler-view-scroll-to-the-bottom-when-the-new-item-is-added">Make the recycler view scroll to the bottom when the new item is added</h4>
+</div><h3 id="make-the-recycler-view-scroll-to-the-bottom-when-the-new-item-is-added">Make the recycler view scroll to the bottom when the new item is added</h3>
 <p>We are using the Firestore recycler adapter to organize our chat, so we can use the following code to make the recyclerview scroll to the bottom when the activity start (onCreate() or onStart()) or if we wanted to have a refresh, for example in the case that you provided your UI with Swipe refresh to load more messages:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
