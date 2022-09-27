@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Jagar" /><meta name="description" content="We will in few steps how we can work on javaFX within a gradle project in the new intellij build 2019.2 which may apply other builds too.
+<meta name="author" content="Jagar Yousef" /><meta name="description" content="We will in few steps how we can work on javaFX within a gradle project in the new intellij build 2019.2 which may apply other builds too.
 " /><meta name="keywords" content="Java, Android, Tutorials" />
 
 
@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.104.1 with theme even" />
 
 
 <link rel="canonical" href="https://jagar.me/post/how_to_create_a_gradle_project_with_javafx_in_intellij/" />
@@ -35,39 +35,25 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="How to create a gradle project with javaFX in intellij" />
 <meta property="og:description" content="We will in few steps how we can work on javaFX within a gradle project in the new intellij build 2019.2 which may apply other builds too." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jagar.me/post/how_to_create_a_gradle_project_with_javafx_in_intellij/" />
-<meta property="article:published_time" content="2019-08-03T21:21:38&#43;03:00"/>
-<meta property="article:modified_time" content="2019-08-03T21:21:38&#43;03:00"/>
+<meta property="og:url" content="https://jagar.me/post/how_to_create_a_gradle_project_with_javafx_in_intellij/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-08-03T21:21:38+03:00" />
+<meta property="article:modified_time" content="2019-08-03T21:21:38+03:00" />
 
 <meta itemprop="name" content="How to create a gradle project with javaFX in intellij">
-<meta itemprop="description" content="We will in few steps how we can work on javaFX within a gradle project in the new intellij build 2019.2 which may apply other builds too.">
-
-
-<meta itemprop="datePublished" content="2019-08-03T21:21:38&#43;03:00" />
-<meta itemprop="dateModified" content="2019-08-03T21:21:38&#43;03:00" />
+<meta itemprop="description" content="We will in few steps how we can work on javaFX within a gradle project in the new intellij build 2019.2 which may apply other builds too."><meta itemprop="datePublished" content="2019-08-03T21:21:38+03:00" />
+<meta itemprop="dateModified" content="2019-08-03T21:21:38+03:00" />
 <meta itemprop="wordCount" content="340">
-
-
-
-<meta itemprop="keywords" content="Intellij,Gradle,UTF-8," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="Intellij,Gradle,UTF-8," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to create a gradle project with javaFX in intellij"/>
 <meta name="twitter:description" content="We will in few steps how we can work on javaFX within a gradle project in the new intellij build 2019.2 which may apply other builds too."/>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-1293903967179873",
-    enable_page_level_ads: true
-  });
-</script>
-
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -94,38 +80,48 @@
   <ul class="mobile-menu-list">
     <a href="/">
         <li class="mobile-menu-item">Home</li>
-      </a><a href="/categories">
-        <li class="mobile-menu-item">Catagories</li>
+      </a><a href="/categories/android/">
+        <li class="mobile-menu-item">Android</li>
+      </a><a href="/categories/javafx/">
+        <li class="mobile-menu-item">JavaFX</li>
+      </a><a href="/categories/security/">
+        <li class="mobile-menu-item">Security</li>
       </a><a href="/tags/">
         <li class="mobile-menu-item">Tags</li>
-      </a><a href="https://github.com/JagarYousef">
-        <li class="mobile-menu-item">GitHub</li>
-      </a><a href="mailto:jagar.yousef@gmail.com">
-        <li class="mobile-menu-item">Contact</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Jagar</a>
 </div>
 
+
+
+
+
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
         <a class="menu-item-link" href="/">Home</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories">Catagories</a>
+        <a class="menu-item-link" href="/categories/android/">Android</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/javafx/">JavaFX</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/security/">Security</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="https://github.com/JagarYousef">GitHub</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="mailto:jagar.yousef@gmail.com">Contact</a>
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -150,39 +146,30 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#creating-the-project">Creating the project</a></li>
-<li><a href="#adding-javafx-support">Adding JavaFX support</a></li>
-<li><a href="#adding-utf-8-support-to-the-gradle-and-javafx-project">Adding UTF-8 support to the gradle and JavaFX project</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#creating-the-project">Creating the project</a></li>
+        <li><a href="#adding-javafx-support">Adding JavaFX support</a></li>
+        <li><a href="#adding-utf-8-support-to-the-gradle-and-javafx-project">Adding UTF-8 support to the gradle and JavaFX project</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
       <p>We will in few steps how we can work on javaFX within a gradle project in the new intellij build 2019.2 which may apply other builds too.</p>
-
 <h3 id="creating-the-project">Creating the project</h3>
-
 <p>In intellij we go to <strong>File &gt; New &gt; Project</strong> and we select <strong>Gradle</strong> then on the right menu we select <strong>Java</strong>.</p>
-
 <p>Click next then in <strong>GroupId</strong> put the package name could be something like com.domain.app (at least one dot should be included) and the <strong>ArtifactId</strong> could be your program name and put the version then click next.</p>
-
 <p>Select the project name and location then click <strong>finish</strong>.</p>
-
 <h3 id="adding-javafx-support">Adding JavaFX support</h3>
-
 <p>Go to project tab and then <strong>build.gradle</strong> under the project name (Make sure you are in the project view from the dropdown menu)</p>
-
 <p>Your default build.gradle will look like:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -199,81 +186,76 @@
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">plugins</span> <span class="o">{</span>
-    <span class="n">id</span> <span class="s1">&#39;java&#39;</span>
-<span class="o">}</span>
-
-<span class="n">version</span> <span class="s1">&#39;1.0-SNAPSHOT&#39;</span>
-
-<span class="n">sourceCompatibility</span> <span class="o">=</span> <span class="mf">1.8</span>
-
-<span class="n">repositories</span> <span class="o">{</span>
-    <span class="n">mavenCentral</span><span class="o">()</span>
-<span class="o">}</span>
-
-<span class="n">dependencies</span> <span class="o">{</span>
-    <span class="n">testCompile</span> <span class="nl">group:</span> <span class="s1">&#39;junit&#39;</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">&#39;junit&#39;</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">&#39;4.12&#39;</span>
-<span class="o">}</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">plugins</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">id</span> <span class="s1">&#39;java&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">version</span> <span class="s1">&#39;1.0-SNAPSHOT&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">sourceCompatibility</span> <span class="o">=</span> <span class="mf">1.8</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mavenCentral</span><span class="o">()</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">testCompile</span> <span class="nl">group:</span> <span class="s1">&#39;junit&#39;</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">&#39;junit&#39;</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">&#39;4.12&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<p>In plugins and under id &lsquo;java&rsquo; add:</p>
+</div><p>In plugins and under id &lsquo;java&rsquo; add:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">id</span> <span class="s1">&#39;org.openjfx.javafxplugin&#39;</span> <span class="n">version</span> <span class="s1">&#39;0.0.8&#39;</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">id</span> <span class="s1">&#39;org.openjfx.javafxplugin&#39;</span> <span class="n">version</span> <span class="s1">&#39;0.0.8&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<p>And also at the bottom add the following:</p>
+</div><p>And also at the bottom add the following:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">javafx</span> <span class="o">{</span>
-    <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;12&#39;</span>
-    <span class="n">modules</span> <span class="o">=</span> <span class="o">[</span> <span class="s1">&#39;javafx.controls&#39;</span><span class="o">,</span> <span class="s1">&#39;javafx.fxml&#39;</span> <span class="o">]</span>
-    <span class="n">configuration</span> <span class="o">=</span> <span class="s1">&#39;compileOnly&#39;</span>
-<span class="o">}</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">javafx</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;12&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">modules</span> <span class="o">=</span> <span class="o">[</span> <span class="s1">&#39;javafx.controls&#39;</span><span class="o">,</span> <span class="s1">&#39;javafx.fxml&#39;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">configuration</span> <span class="o">=</span> <span class="s1">&#39;compileOnly&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<p>Make sure that the version matches your build JDK version and also include more modules if you want but by default some modules like javafx.base and javafx.graphics are  javafx.controls and javafx.fxml.</p>
-
+</div><p>Make sure that the version matches your build JDK version and also include more modules if you want but by default some modules like javafx.base and javafx.graphics are  javafx.controls and javafx.fxml.</p>
 <p>Now, click the gradle tab on the right and click refresh button on its upper menu.</p>
-
 <h3 id="adding-utf-8-support-to-the-gradle-and-javafx-project">Adding UTF-8 support to the gradle and JavaFX project</h3>
-
 <p>This is necessary if you want to deal with some non English texts like, Arabic, Kurdish and so on.</p>
-
 <p>You will need to add the following to the bottom of the <strong>build.gradle</strong> file:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">compileJava</span><span class="o">.</span><span class="na">options</span><span class="o">.</span><span class="na">encoding</span> <span class="o">=</span> <span class="s1">&#39;UTF-8&#39;</span>
-<span class="n">tasks</span><span class="o">.</span><span class="na">withType</span><span class="o">(</span><span class="n">JavaCompile</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">options</span><span class="o">.</span><span class="na">encoding</span> <span class="o">=</span> <span class="s1">&#39;UTF-8&#39;</span>
-<span class="o">}</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">compileJava</span><span class="o">.</span><span class="na">options</span><span class="o">.</span><span class="na">encoding</span> <span class="o">=</span> <span class="s1">&#39;UTF-8&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">tasks</span><span class="o">.</span><span class="na">withType</span><span class="o">(</span><span class="n">JavaCompile</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">options</span><span class="o">.</span><span class="na">encoding</span> <span class="o">=</span> <span class="s1">&#39;UTF-8&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<p>Now, click the gradle tab on the right and click refresh button on its upper menu.</p>
-
+</div><p>Now, click the gradle tab on the right and click refresh button on its upper menu.</p>
 <p>That&rsquo;s it, don&rsquo;t forget to comment if you had any issues with these steps.</p>
     </div>
 
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">Jagar</span>
+    <span class="item-content">Jagar Yousef</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
@@ -321,6 +303,10 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
+  
+
+  
+
       </div>
     </main>
 
@@ -333,20 +319,24 @@
 </div>
 
 <div class="copyright">
-  
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
 
   
 
   <span class="copyright-year">
     &copy; 
     2019 - 
-    2020
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Jagar</span>
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>Jagar</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -357,7 +347,10 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 <script type="application/javascript">

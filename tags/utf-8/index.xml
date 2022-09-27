@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>UTF-8 on Jagar</title>
@@ -6,11 +6,7 @@
     <description>Recent content in UTF-8 on Jagar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 03 Aug 2019 21:21:38 +0300</lastBuildDate>
-    
-	<atom:link href="https://jagar.me/tags/utf-8/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 03 Aug 2019 21:21:38 +0300</lastBuildDate><atom:link href="https://jagar.me/tags/utf-8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to create a gradle project with javaFX in intellij</title>
       <link>https://jagar.me/post/how_to_create_a_gradle_project_with_javafx_in_intellij/</link>

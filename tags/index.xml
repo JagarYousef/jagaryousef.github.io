@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Jagar</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Tags on Jagar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 Nov 2019 18:39:32 +0300</lastBuildDate>
-    
-	<atom:link href="https://jagar.me/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 15 Nov 2019 18:39:32 +0300</lastBuildDate><atom:link href="https://jagar.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Android</title>
       <link>https://jagar.me/tags/android/</link>
@@ -75,6 +71,15 @@
     </item>
     
     <item>
+      <title>exec</title>
+      <link>https://jagar.me/tags/exec/</link>
+      <pubDate>Sun, 01 Sep 2019 08:57:46 +0300</pubDate>
+      
+      <guid>https://jagar.me/tags/exec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>PHP Slim framework</title>
       <link>https://jagar.me/tags/php-slim-framework/</link>
       <pubDate>Sun, 01 Sep 2019 08:57:46 +0300</pubDate>
@@ -98,15 +103,6 @@
       <pubDate>Sun, 01 Sep 2019 08:57:46 +0300</pubDate>
       
       <guid>https://jagar.me/tags/retrofit-2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>exec</title>
-      <link>https://jagar.me/tags/exec/</link>
-      <pubDate>Sun, 01 Sep 2019 08:57:46 +0300</pubDate>
-      
-      <guid>https://jagar.me/tags/exec/</guid>
       <description></description>
     </item>
     

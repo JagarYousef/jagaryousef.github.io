@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Jagar" /><meta name="description" content="In this tutorial, we will go step-by-step in implementing an easy voice player in Android and avoid all those android&amp;rsquo;s MediaPlayer unwanted errors. So this could be a good option to be out there in your chat app.
+<meta name="author" content="Jagar Yousef" /><meta name="description" content="In this tutorial, we will go step-by-step in implementing an easy voice player in Android and avoid all those android&amp;rsquo;s MediaPlayer unwanted errors. So this could be a good option to be out there in your chat app.
 " /><meta name="keywords" content="Java, Android, Tutorials" />
 
 
@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.104.1 with theme even" />
 
 
 <link rel="canonical" href="https://jagar.me/post/voicemessagesview/" />
@@ -35,39 +35,25 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="How to create a view for voice messages in Android" />
 <meta property="og:description" content="In this tutorial, we will go step-by-step in implementing an easy voice player in Android and avoid all those android&rsquo;s MediaPlayer unwanted errors. So this could be a good option to be out there in your chat app." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jagar.me/post/voicemessagesview/" />
-<meta property="article:published_time" content="2019-05-19T14:17:58&#43;03:00"/>
-<meta property="article:modified_time" content="2019-05-19T14:17:58&#43;03:00"/>
+<meta property="og:url" content="https://jagar.me/post/voicemessagesview/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-05-19T14:17:58+03:00" />
+<meta property="article:modified_time" content="2019-05-19T14:17:58+03:00" />
 
 <meta itemprop="name" content="How to create a view for voice messages in Android">
-<meta itemprop="description" content="In this tutorial, we will go step-by-step in implementing an easy voice player in Android and avoid all those android&rsquo;s MediaPlayer unwanted errors. So this could be a good option to be out there in your chat app.">
-
-
-<meta itemprop="datePublished" content="2019-05-19T14:17:58&#43;03:00" />
-<meta itemprop="dateModified" content="2019-05-19T14:17:58&#43;03:00" />
+<meta itemprop="description" content="In this tutorial, we will go step-by-step in implementing an easy voice player in Android and avoid all those android&rsquo;s MediaPlayer unwanted errors. So this could be a good option to be out there in your chat app."><meta itemprop="datePublished" content="2019-05-19T14:17:58+03:00" />
+<meta itemprop="dateModified" content="2019-05-19T14:17:58+03:00" />
 <meta itemprop="wordCount" content="1259">
-
-
-
-<meta itemprop="keywords" content="MediaPlayer,Chatting,SeekBar," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="MediaPlayer,Chatting,SeekBar," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to create a view for voice messages in Android"/>
 <meta name="twitter:description" content="In this tutorial, we will go step-by-step in implementing an easy voice player in Android and avoid all those android&rsquo;s MediaPlayer unwanted errors. So this could be a good option to be out there in your chat app."/>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-1293903967179873",
-    enable_page_level_ads: true
-  });
-</script>
-
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -94,38 +80,48 @@
   <ul class="mobile-menu-list">
     <a href="/">
         <li class="mobile-menu-item">Home</li>
-      </a><a href="/categories">
-        <li class="mobile-menu-item">Catagories</li>
+      </a><a href="/categories/android/">
+        <li class="mobile-menu-item">Android</li>
+      </a><a href="/categories/javafx/">
+        <li class="mobile-menu-item">JavaFX</li>
+      </a><a href="/categories/security/">
+        <li class="mobile-menu-item">Security</li>
       </a><a href="/tags/">
         <li class="mobile-menu-item">Tags</li>
-      </a><a href="https://github.com/JagarYousef">
-        <li class="mobile-menu-item">GitHub</li>
-      </a><a href="mailto:jagar.yousef@gmail.com">
-        <li class="mobile-menu-item">Contact</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Jagar</a>
 </div>
 
+
+
+
+
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
         <a class="menu-item-link" href="/">Home</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories">Catagories</a>
+        <a class="menu-item-link" href="/categories/android/">Android</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/javafx/">JavaFX</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/security/">Security</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="https://github.com/JagarYousef">GitHub</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="mailto:jagar.yousef@gmail.com">Contact</a>
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -151,35 +147,29 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#xml">XML</a></li>
-<li><a href="#java">JAVA</a></li>
-<li><a href="#recommendations">Recommendations</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#xml">XML</a></li>
+        <li><a href="#java">JAVA</a></li>
+        <li><a href="#recommendations">Recommendations</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
       <p>In this tutorial, we will go step-by-step in implementing an easy voice player in Android and avoid all those android&rsquo;s <em>MediaPlayer</em> unwanted errors. So this could be a good option to be out there in your chat app.</p>
-
-<p><img src="https://user-images.githubusercontent.com/41321155/57981450-555a7d00-7a40-11e9-8ffd-c306ed66f2f3.png" alt="Screenshot" /></p>
-
-<!--adsense-->
-
+<p><img src="https://user-images.githubusercontent.com/41321155/57981450-555a7d00-7a40-11e9-8ffd-c306ed66f2f3.png" alt="Screenshot"></p>
+<!-- raw HTML omitted -->
 <h3 id="xml">XML</h3>
-
 <ol>
-<li>We will create <em>activity_main.xml</em> layout:</li>
-</ol>
+<li>
+<p>We will create <em>activity_main.xml</em> layout:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -240,73 +230,73 @@
 </span><span class="lnt">59
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml">   <span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
-   <span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
-       <span class="na">android:background=</span><span class="s">&#34;@drawable/main_layout_bg&#34;</span>
-       <span class="na">android:gravity=</span><span class="s">&#34;center_horizontal&#34;</span>
-       <span class="na">android:orientation=</span><span class="s">&#34;horizontal&#34;</span>
-       <span class="na">tools:context=</span><span class="s">&#34;.MainActivity&#34;</span>
-       <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
-       <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
-       <span class="na">android:id=</span><span class="s">&#34;@+id/collectorLinearLayout&#34;</span><span class="nt">&gt;</span>
-           <span class="nt">&lt;LinearLayout</span>
-               <span class="na">android:id=</span><span class="s">&#34;@+id/paddedLinearLayout&#34;</span>
-               <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
-               <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
-               <span class="na">android:orientation=</span><span class="s">&#34;horizontal&#34;</span>
-               <span class="na">android:padding=</span><span class="s">&#34;5dp&#34;</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;ImageView</span>
-                   <span class="na">android:clickable=</span><span class="s">&#34;true&#34;</span>
-                   <span class="na">android:id=</span><span class="s">&#34;@+id/imgPlay&#34;</span>
-                   <span class="na">android:layout_width=</span><span class="s">&#34;45dp&#34;</span>
-                   <span class="na">android:layout_height=</span><span class="s">&#34;45dp&#34;</span>
-                   <span class="na">android:background=</span><span class="s">&#34;@drawable/play_pause_bg&#34;</span>
-                   <span class="na">android:src=</span><span class="s">&#34;@drawable/ic_play_arrow_white_24dp&#34;</span>
-                   <span class="na">android:focusable=</span><span class="s">&#34;true&#34;</span> <span class="nt">/&gt;</span>
-               <span class="nt">&lt;ImageView</span>
-                   <span class="na">android:clickable=</span><span class="s">&#34;true&#34;</span>
-                   <span class="na">android:id=</span><span class="s">&#34;@+id/imgPause&#34;</span>
-                   <span class="na">android:layout_width=</span><span class="s">&#34;45dp&#34;</span>
-                   <span class="na">android:layout_height=</span><span class="s">&#34;45dp&#34;</span>
-                   <span class="na">android:background=</span><span class="s">&#34;@drawable/play_pause_bg&#34;</span>
-                   <span class="na">android:src=</span><span class="s">&#34;@drawable/ic_pause_white_24dp&#34;</span>
-                   <span class="na">android:visibility=</span><span class="s">&#34;gone&#34;</span>
-                   <span class="na">android:focusable=</span><span class="s">&#34;true&#34;</span> <span class="nt">/&gt;</span>
-               <span class="nt">&lt;LinearLayout</span>
-                   <span class="na">android:id=</span><span class="s">&#34;@+id/containerLinearLayout&#34;</span>
-                   <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
-                   <span class="na">android:layout_height=</span><span class="s">&#34;match_parent&#34;</span>
-                   <span class="na">android:orientation=</span><span class="s">&#34;vertical&#34;</span><span class="nt">&gt;</span>
-                   <span class="nt">&lt;TextView</span>
-                       <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
-                       <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
-                       <span class="na">android:id=</span><span class="s">&#34;@+id/txtTime&#34;</span>
-                       <span class="na">android:layout_gravity=</span><span class="s">&#34;end&#34;</span>
-                       <span class="na">android:layout_marginEnd=</span><span class="s">&#34;16dp&#34;</span>
-                       <span class="na">android:textSize=</span><span class="s">&#34;10sp&#34;</span>
-                       <span class="na">android:text=</span><span class="s">&#34;00:00:00 / 00:00:00&#34;</span>
-                       <span class="na">android:layout_marginRight=</span><span class="s">&#34;16dp&#34;</span> <span class="nt">/&gt;</span>
-                   <span class="nt">&lt;SeekBar</span>
-                       <span class="na">android:id=</span><span class="s">&#34;@+id/seekBar&#34;</span>
-                       <span class="na">android:layout_width=</span><span class="s">&#34;225dp&#34;</span>
-                       <span class="na">android:layout_marginStart=</span><span class="s">&#34;0dp&#34;</span>
-                       <span class="na">android:layout_marginEnd=</span><span class="s">&#34;4dp&#34;</span>
-                       <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
-                       <span class="na">android:layout_marginRight=</span><span class="s">&#34;4dp&#34;</span>
-                       <span class="na">android:layout_marginLeft=</span><span class="s">&#34;0dp&#34;</span> <span class="nt">/&gt;</span>
-               <span class="nt">&lt;/LinearLayout&gt;</span>
-           <span class="nt">&lt;/LinearLayout&gt;</span>
-   
-   
-   <span class="nt">&lt;/LinearLayout&gt;</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">android:background=</span><span class="s">&#34;@drawable/main_layout_bg&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">android:gravity=</span><span class="s">&#34;center_horizontal&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">android:orientation=</span><span class="s">&#34;horizontal&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">tools:context=</span><span class="s">&#34;.MainActivity&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">android:id=</span><span class="s">&#34;@+id/collectorLinearLayout&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;LinearLayout</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:id=</span><span class="s">&#34;@+id/paddedLinearLayout&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:orientation=</span><span class="s">&#34;horizontal&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:padding=</span><span class="s">&#34;5dp&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;ImageView</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:clickable=</span><span class="s">&#34;true&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:id=</span><span class="s">&#34;@+id/imgPlay&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:layout_width=</span><span class="s">&#34;45dp&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:layout_height=</span><span class="s">&#34;45dp&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:background=</span><span class="s">&#34;@drawable/play_pause_bg&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:src=</span><span class="s">&#34;@drawable/ic_play_arrow_white_24dp&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:focusable=</span><span class="s">&#34;true&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;ImageView</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:clickable=</span><span class="s">&#34;true&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:id=</span><span class="s">&#34;@+id/imgPause&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:layout_width=</span><span class="s">&#34;45dp&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:layout_height=</span><span class="s">&#34;45dp&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:background=</span><span class="s">&#34;@drawable/play_pause_bg&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:src=</span><span class="s">&#34;@drawable/ic_pause_white_24dp&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:visibility=</span><span class="s">&#34;gone&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:focusable=</span><span class="s">&#34;true&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;LinearLayout</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:id=</span><span class="s">&#34;@+id/containerLinearLayout&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:layout_height=</span><span class="s">&#34;match_parent&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">android:orientation=</span><span class="s">&#34;vertical&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;TextView</span>
+</span></span><span class="line"><span class="cl">                    <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
+</span></span><span class="line"><span class="cl">                    <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+</span></span><span class="line"><span class="cl">                    <span class="na">android:id=</span><span class="s">&#34;@+id/txtTime&#34;</span>
+</span></span><span class="line"><span class="cl">                    <span class="na">android:layout_gravity=</span><span class="s">&#34;end&#34;</span>
+</span></span><span class="line"><span class="cl">                    <span class="na">android:layout_marginEnd=</span><span class="s">&#34;16dp&#34;</span>
+</span></span><span class="line"><span class="cl">                    <span class="na">android:textSize=</span><span class="s">&#34;10sp&#34;</span>
+</span></span><span class="line"><span class="cl">                    <span class="na">android:text=</span><span class="s">&#34;00:00:00 / 00:00:00&#34;</span>
+</span></span><span class="line"><span class="cl">                    <span class="na">android:layout_marginRight=</span><span class="s">&#34;16dp&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;SeekBar</span>
+</span></span><span class="line"><span class="cl">                    <span class="na">android:id=</span><span class="s">&#34;@+id/seekBar&#34;</span>
+</span></span><span class="line"><span class="cl">                    <span class="na">android:layout_width=</span><span class="s">&#34;225dp&#34;</span>
+</span></span><span class="line"><span class="cl">                    <span class="na">android:layout_marginStart=</span><span class="s">&#34;0dp&#34;</span>
+</span></span><span class="line"><span class="cl">                    <span class="na">android:layout_marginEnd=</span><span class="s">&#34;4dp&#34;</span>
+</span></span><span class="line"><span class="cl">                    <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+</span></span><span class="line"><span class="cl">                    <span class="na">android:layout_marginRight=</span><span class="s">&#34;4dp&#34;</span>
+</span></span><span class="line"><span class="cl">                    <span class="na">android:layout_marginLeft=</span><span class="s">&#34;0dp&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/LinearLayout&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/LinearLayout&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/LinearLayout&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<ol>
-<li>Create <em>main_layout_bg.xml</em> in your drawable folder:</li>
-</ol>
+</div></li>
+<li>
+<p>Create <em>main_layout_bg.xml</em> in your drawable folder:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -315,21 +305,21 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml">   <span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
-   <span class="nt">&lt;shape</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span><span class="nt">&gt;</span>
-       <span class="nt">&lt;solid</span>
-           <span class="na">android:color=</span><span class="s">&#34;@color/white&#34;</span><span class="nt">/&gt;</span>
-       <span class="nt">&lt;corners</span>
-           <span class="na">android:radius=</span><span class="s">&#34;50dp&#34;</span> <span class="nt">/&gt;</span>
-   <span class="nt">&lt;/shape&gt;</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;shape</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;solid</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:color=</span><span class="s">&#34;@color/white&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;corners</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:radius=</span><span class="s">&#34;50dp&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/shape&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<ol>
-<li>Create <em>play_pause_bg.xml</em> in your drawable folder:</li>
-</ol>
+</div></li>
+<li>
+<p>Create <em>play_pause_bg.xml</em> in your drawable folder:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -358,41 +348,41 @@
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml">   <span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
-   <span class="nt">&lt;selector</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span><span class="nt">&gt;</span>
-   <span class="nt">&lt;item</span> <span class="na">android:state_pressed=</span><span class="s">&#34;true&#34;</span> <span class="nt">&gt;</span>
-       <span class="nt">&lt;shape</span> <span class="na">android:shape=</span><span class="s">&#34;oval&#34;</span><span class="nt">&gt;</span>
-   
-           <span class="nt">&lt;gradient</span>
-               <span class="na">android:startColor=</span><span class="s">&#34;@color/pink&#34;</span>
-               <span class="na">android:endColor=</span><span class="s">&#34;@color/lightPink&#34;</span> <span class="nt">/&gt;</span>
-           <span class="nt">&lt;padding</span>
-               <span class="na">android:left=</span><span class="s">&#34;10dp&#34;</span>
-               <span class="na">android:top=</span><span class="s">&#34;10dp&#34;</span>
-               <span class="na">android:right=</span><span class="s">&#34;10dp&#34;</span>
-               <span class="na">android:bottom=</span><span class="s">&#34;10dp&#34;</span> <span class="nt">/&gt;</span>
-       <span class="nt">&lt;/shape&gt;</span>
-   <span class="nt">&lt;/item&gt;</span>
-   <span class="nt">&lt;item&gt;</span>
-       <span class="nt">&lt;shape</span> <span class="na">android:shape=</span><span class="s">&#34;oval&#34;</span><span class="nt">&gt;</span>
-           <span class="nt">&lt;solid</span>
-               <span class="na">android:color=</span><span class="s">&#34;@color/pink&#34;</span> <span class="nt">/&gt;</span>
-           <span class="nt">&lt;padding</span>
-               <span class="na">android:left=</span><span class="s">&#34;10dp&#34;</span>
-               <span class="na">android:top=</span><span class="s">&#34;10dp&#34;</span>
-               <span class="na">android:right=</span><span class="s">&#34;10dp&#34;</span>
-               <span class="na">android:bottom=</span><span class="s">&#34;10dp&#34;</span> <span class="nt">/&gt;</span>
-       <span class="nt">&lt;/shape&gt;</span>
-   <span class="nt">&lt;/item&gt;</span>
-   <span class="nt">&lt;/selector&gt;</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;selector</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;item</span> <span class="na">android:state_pressed=</span><span class="s">&#34;true&#34;</span> <span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;shape</span> <span class="na">android:shape=</span><span class="s">&#34;oval&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;gradient</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:startColor=</span><span class="s">&#34;@color/pink&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:endColor=</span><span class="s">&#34;@color/lightPink&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;padding</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:left=</span><span class="s">&#34;10dp&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:top=</span><span class="s">&#34;10dp&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:right=</span><span class="s">&#34;10dp&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:bottom=</span><span class="s">&#34;10dp&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/shape&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/item&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;item&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;shape</span> <span class="na">android:shape=</span><span class="s">&#34;oval&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;solid</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:color=</span><span class="s">&#34;@color/pink&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;padding</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:left=</span><span class="s">&#34;10dp&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:top=</span><span class="s">&#34;10dp&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:right=</span><span class="s">&#34;10dp&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:bottom=</span><span class="s">&#34;10dp&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/shape&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/item&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/selector&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<ol>
-<li>You can customize your colors <em>colors.xml</em> as any other item in this tutorial:</li>
-</ol>
+</div></li>
+<li>
+<p>You can customize your colors <em>colors.xml</em> as any other item in this tutorial:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -403,29 +393,29 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml">   <span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
-   <span class="nt">&lt;resources&gt;</span>
-       <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&#34;colorPrimary&#34;</span><span class="nt">&gt;</span>#008577<span class="nt">&lt;/color&gt;</span>
-       <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&#34;colorPrimaryDark&#34;</span><span class="nt">&gt;</span>#00574B<span class="nt">&lt;/color&gt;</span>
-       <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&#34;colorAccent&#34;</span><span class="nt">&gt;</span>#D81B60<span class="nt">&lt;/color&gt;</span>
-       <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&#34;white&#34;</span><span class="nt">&gt;</span>#ffffff<span class="nt">&lt;/color&gt;</span>
-       <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&#34;pink&#34;</span><span class="nt">&gt;</span>#fe485a<span class="nt">&lt;/color&gt;</span>
-       <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&#34;lightPink&#34;</span><span class="nt">&gt;</span>#ef818c<span class="nt">&lt;/color&gt;</span>
-   <span class="nt">&lt;/resources&gt;</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;resources&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&#34;colorPrimary&#34;</span><span class="nt">&gt;</span>#008577<span class="nt">&lt;/color&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&#34;colorPrimaryDark&#34;</span><span class="nt">&gt;</span>#00574B<span class="nt">&lt;/color&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&#34;colorAccent&#34;</span><span class="nt">&gt;</span>#D81B60<span class="nt">&lt;/color&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&#34;white&#34;</span><span class="nt">&gt;</span>#ffffff<span class="nt">&lt;/color&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&#34;pink&#34;</span><span class="nt">&gt;</span>#fe485a<span class="nt">&lt;/color&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&#34;lightPink&#34;</span><span class="nt">&gt;</span>#ef818c<span class="nt">&lt;/color&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/resources&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
+</div></li>
+</ol>
 <ul>
 <li>Use <strong>Vector Asset</strong> to create your play and pause icons.</li>
 </ul>
-
 <h3 id="java">JAVA</h3>
-
-<ol>
-<li>Now we create our <em>VoicePlayer.java</em> class which will deal with all playing and pausing processes:</li>
-</ol>
+<ol start="5">
+<li>
+<p>Now we create our <em>VoicePlayer.java</em> class which will deal with all playing and pausing processes:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">  1
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -634,232 +624,232 @@
 </span><span class="lnt">207
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">   <span class="kn">package</span> <span class="nn">me.jagar.tutorial</span><span class="o">;</span>
-   
-   <span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
-   <span class="kn">import</span> <span class="nn">android.content.Context</span><span class="o">;</span>
-   <span class="kn">import</span> <span class="nn">android.media.AudioManager</span><span class="o">;</span>
-   <span class="kn">import</span> <span class="nn">android.media.MediaPlayer</span><span class="o">;</span>
-   <span class="kn">import</span> <span class="nn">android.os.Handler</span><span class="o">;</span>
-   <span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
-   <span class="kn">import</span> <span class="nn">android.widget.ImageView</span><span class="o">;</span>
-   <span class="kn">import</span> <span class="nn">android.widget.SeekBar</span><span class="o">;</span>
-   <span class="kn">import</span> <span class="nn">android.widget.TextView</span><span class="o">;</span>
-   
-   <span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
-   
-   <span class="kd">public</span> <span class="kd">class</span> <span class="nc">VoicePlayer</span> <span class="o">{</span>
-   
-       <span class="kd">private</span> <span class="kd">static</span> <span class="n">VoicePlayer</span> <span class="n">mInstance</span><span class="o">;</span>
-       <span class="kd">private</span> <span class="n">Context</span> <span class="n">context</span><span class="o">;</span>
-       <span class="kd">private</span> <span class="n">ImageView</span> <span class="n">imgPlay</span><span class="o">,</span> <span class="n">imgPause</span><span class="o">;</span>
-       <span class="kd">private</span> <span class="n">SeekBar</span> <span class="n">seekBar</span><span class="o">;</span>
-       <span class="kd">private</span> <span class="n">TextView</span> <span class="n">txtProcess</span><span class="o">;</span>
-       <span class="kd">private</span> <span class="n">MediaPlayer</span> <span class="n">mediaPlayer</span><span class="o">;</span>
-   
-       <span class="kd">public</span> <span class="nf">VoicePlayer</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
-           <span class="k">this</span><span class="o">.</span><span class="na">context</span> <span class="o">=</span> <span class="n">context</span><span class="o">;</span>
-       <span class="o">}</span>
-   
-       <span class="kd">public</span> <span class="kd">static</span> <span class="kd">synchronized</span> <span class="n">VoicePlayer</span> <span class="nf">getInstance</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
-           <span class="k">if</span> <span class="o">(</span><span class="n">mInstance</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-               <span class="n">mInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="n">VoicePlayer</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
-           <span class="o">}</span>
-           <span class="k">return</span> <span class="n">mInstance</span><span class="o">;</span>
-       <span class="o">}</span>
-       <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">String</span> <span class="n">path</span><span class="o">,</span> <span class="kd">final</span> <span class="n">ImageView</span> <span class="n">imgPlay</span><span class="o">,</span> <span class="kd">final</span> <span class="n">ImageView</span> <span class="n">imgPause</span><span class="o">,</span> <span class="kd">final</span> <span class="n">SeekBar</span> <span class="n">seekBar</span><span class="o">,</span> <span class="kd">final</span> <span class="n">TextView</span> <span class="n">txtProcess</span><span class="o">){</span>
-   
-           <span class="k">this</span><span class="o">.</span><span class="na">imgPlay</span> <span class="o">=</span> <span class="n">imgPlay</span><span class="o">;</span>
-           <span class="k">this</span><span class="o">.</span><span class="na">imgPause</span> <span class="o">=</span> <span class="n">imgPause</span><span class="o">;</span>
-           <span class="k">this</span><span class="o">.</span><span class="na">seekBar</span> <span class="o">=</span> <span class="n">seekBar</span><span class="o">;</span>
-           <span class="k">this</span><span class="o">.</span><span class="na">txtProcess</span> <span class="o">=</span> <span class="n">txtProcess</span><span class="o">;</span>
-   
-   
-           <span class="n">mediaPlayer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MediaPlayer</span><span class="o">();</span>
-           <span class="k">if</span> <span class="o">(</span><span class="n">path</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-               <span class="k">try</span> <span class="o">{</span>
-                   <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">setDataSource</span><span class="o">(</span><span class="n">path</span><span class="o">);</span>
-                   <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">setAudioStreamType</span><span class="o">(</span><span class="n">AudioManager</span><span class="o">.</span><span class="na">STREAM_MUSIC</span><span class="o">);</span>
-                   <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">prepare</span><span class="o">();</span>
-                   <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">setVolume</span><span class="o">(</span><span class="n">10</span><span class="o">,</span> <span class="n">10</span><span class="o">);</span>
-                   <span class="c1">//START and PAUSE are in other listeners
-</span><span class="c1"></span>                   <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">setOnPreparedListener</span><span class="o">(</span><span class="k">new</span> <span class="n">MediaPlayer</span><span class="o">.</span><span class="na">OnPreparedListener</span><span class="o">()</span> <span class="o">{</span>
-                       <span class="nd">@Override</span>
-                       <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onPrepared</span><span class="o">(</span><span class="n">MediaPlayer</span> <span class="n">mp</span><span class="o">)</span> <span class="o">{</span>
-                           <span class="n">seekBar</span><span class="o">.</span><span class="na">setMax</span><span class="o">(</span><span class="n">mp</span><span class="o">.</span><span class="na">getDuration</span><span class="o">());</span>
-                           <span class="n">txtProcess</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">&#34;00:00:00/&#34;</span><span class="o">+</span><span class="n">convertTime</span><span class="o">(</span><span class="n">mp</span><span class="o">.</span><span class="na">getDuration</span><span class="o">()</span> <span class="o">/</span> <span class="n">1000</span><span class="o">));</span>
-                       <span class="o">}</span>
-                   <span class="o">});</span>
-                   <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">setOnCompletionListener</span><span class="o">(</span><span class="k">new</span> <span class="n">MediaPlayer</span><span class="o">.</span><span class="na">OnCompletionListener</span><span class="o">()</span> <span class="o">{</span>
-                       <span class="nd">@Override</span>
-                       <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCompletion</span><span class="o">(</span><span class="n">MediaPlayer</span> <span class="n">mp</span><span class="o">)</span> <span class="o">{</span>
-                           <span class="n">imgPause</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
-                           <span class="n">imgPlay</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
-                       <span class="o">}</span>
-                   <span class="o">});</span>
-   
-               <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-                   <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-               <span class="o">}</span>
-           <span class="o">}</span>
-   
-   
-           <span class="k">this</span><span class="o">.</span><span class="na">seekBar</span><span class="o">.</span><span class="na">setOnSeekBarChangeListener</span><span class="o">(</span><span class="n">seekBarListener</span><span class="o">);</span>
-           <span class="k">this</span><span class="o">.</span><span class="na">imgPlay</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">imgPlayClickListener</span><span class="o">);</span>
-           <span class="k">this</span><span class="o">.</span><span class="na">imgPause</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">imgPauseClickListener</span><span class="o">);</span>
-       <span class="o">}</span>
-   
-   
-       <span class="c1">//Convert long milli seconds to a formatted String to display it
-</span><span class="c1"></span>   
-       <span class="kd">private</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">convertTime</span><span class="o">(</span><span class="kt">long</span> <span class="n">seconds</span><span class="o">)</span> <span class="o">{</span>
-           <span class="kt">long</span> <span class="n">s</span> <span class="o">=</span> <span class="n">seconds</span> <span class="o">%</span> <span class="n">60</span><span class="o">;</span>
-           <span class="kt">long</span> <span class="n">m</span> <span class="o">=</span> <span class="o">(</span><span class="n">seconds</span> <span class="o">/</span> <span class="n">60</span><span class="o">)</span> <span class="o">%</span> <span class="n">60</span><span class="o">;</span>
-           <span class="kt">long</span> <span class="n">h</span> <span class="o">=</span> <span class="o">(</span><span class="n">seconds</span> <span class="o">/</span> <span class="o">(</span><span class="n">60</span> <span class="o">*</span> <span class="n">60</span><span class="o">))</span> <span class="o">%</span> <span class="n">24</span><span class="o">;</span>
-           <span class="k">return</span> <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&#34;%02d:%02d:%02d&#34;</span><span class="o">,</span> <span class="n">h</span><span class="o">,</span><span class="n">m</span><span class="o">,</span><span class="n">s</span><span class="o">);</span>
-       <span class="o">}</span>
-   
-       <span class="c1">//These both functions to avoid mediaplayer errors
-</span><span class="c1"></span>   
-       <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onStop</span><span class="o">(){</span>
-           <span class="k">try</span><span class="o">{</span>
-               <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">stop</span><span class="o">();</span>
-               <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">reset</span><span class="o">();</span>
-               <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">release</span><span class="o">();</span>
-           <span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">){</span>
-               <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-           <span class="o">}</span>
-       <span class="o">}</span>
-   
-       <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onPause</span><span class="o">(){</span>
-           <span class="k">try</span><span class="o">{</span>
-               <span class="k">if</span> <span class="o">(</span><span class="n">mediaPlayer</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">){</span>
-                   <span class="k">if</span> <span class="o">(</span><span class="n">mediaPlayer</span><span class="o">.</span><span class="na">isPlaying</span><span class="o">())</span>
-                       <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">pause</span><span class="o">();</span>
-               <span class="o">}</span>
-           <span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">){</span>
-               <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-           <span class="o">}</span>
-           <span class="n">imgPause</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
-           <span class="n">imgPlay</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
-       <span class="o">}</span>
-   
-   
-   
-       <span class="c1">//Components&#39; listeners
-</span><span class="c1"></span>   
-       <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span> <span class="n">imgPlayClickListener</span> <span class="o">=</span> <span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span><span class="o">()</span> <span class="o">{</span>
-           <span class="nd">@Override</span>
-           <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">View</span> <span class="n">v</span><span class="o">)</span> <span class="o">{</span>
-               <span class="n">imgPause</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
-               <span class="n">imgPlay</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
-               <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
-               <span class="k">try</span><span class="o">{</span>
-                   <span class="n">update</span><span class="o">(</span><span class="n">mediaPlayer</span><span class="o">,</span> <span class="n">txtProcess</span><span class="o">,</span> <span class="n">seekBar</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
-               <span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">){</span>
-                   <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-               <span class="o">}</span>
-   
-           <span class="o">}</span>
-       <span class="o">};</span>
-   
-   
-   
-       <span class="kd">private</span> <span class="n">SeekBar</span><span class="o">.</span><span class="na">OnSeekBarChangeListener</span> <span class="n">seekBarListener</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SeekBar</span><span class="o">.</span><span class="na">OnSeekBarChangeListener</span><span class="o">()</span> <span class="o">{</span>
-           <span class="nd">@Override</span>
-           <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onProgressChanged</span><span class="o">(</span><span class="n">SeekBar</span> <span class="n">seekBar</span><span class="o">,</span> <span class="kt">int</span> <span class="n">progress</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">fromUser</span><span class="o">)</span> <span class="o">{</span>
-               <span class="k">if</span> <span class="o">(</span><span class="n">fromUser</span><span class="o">)</span>
-               <span class="o">{</span>
-                   <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">seekTo</span><span class="o">(</span><span class="n">progress</span><span class="o">);</span>
-               <span class="o">}</span>
-           <span class="o">}</span>
-   
-           <span class="nd">@Override</span>
-           <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onStartTrackingTouch</span><span class="o">(</span><span class="n">SeekBar</span> <span class="n">seekBar</span><span class="o">)</span> <span class="o">{</span>
-               <span class="n">imgPause</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
-               <span class="n">imgPlay</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
-           <span class="o">}</span>
-   
-           <span class="nd">@Override</span>
-           <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onStopTrackingTouch</span><span class="o">(</span><span class="n">SeekBar</span> <span class="n">seekBar</span><span class="o">)</span> <span class="o">{</span>
-               <span class="n">imgPlay</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
-               <span class="n">imgPause</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
-               <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
-   
-           <span class="o">}</span>
-       <span class="o">};</span>
-   
-       <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span> <span class="n">imgPauseClickListener</span> <span class="o">=</span> <span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span><span class="o">()</span> <span class="o">{</span>
-           <span class="nd">@Override</span>
-           <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">View</span> <span class="n">v</span><span class="o">)</span> <span class="o">{</span>
-               <span class="n">imgPause</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
-               <span class="n">imgPlay</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
-               <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">pause</span><span class="o">();</span>
-           <span class="o">}</span>
-       <span class="o">};</span>
-   
-   
-   
-       <span class="c1">//Updating seekBar in realtime
-</span><span class="c1"></span>       <span class="kd">private</span> <span class="kt">void</span> <span class="nf">update</span><span class="o">(</span><span class="kd">final</span> <span class="n">MediaPlayer</span> <span class="n">mediaPlayer</span><span class="o">,</span> <span class="kd">final</span> <span class="n">TextView</span> <span class="n">time</span><span class="o">,</span> <span class="kd">final</span> <span class="n">SeekBar</span> <span class="n">seekBar</span><span class="o">,</span> <span class="kd">final</span> <span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
-           <span class="o">((</span><span class="n">Activity</span><span class="o">)</span><span class="n">context</span><span class="o">).</span><span class="na">runOnUiThread</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-               <span class="nd">@Override</span>
-               <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-                   <span class="n">seekBar</span><span class="o">.</span><span class="na">setProgress</span><span class="o">(</span><span class="n">mediaPlayer</span><span class="o">.</span><span class="na">getCurrentPosition</span><span class="o">());</span>
-                   <span class="k">if</span> <span class="o">(</span><span class="n">mediaPlayer</span><span class="o">.</span><span class="na">getDuration</span><span class="o">()</span> <span class="o">-</span> <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">getCurrentPosition</span><span class="o">()</span> <span class="o">&gt;</span> <span class="n">100</span><span class="o">)</span> <span class="o">{</span>
-                       <span class="n">time</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">convertTime</span><span class="o">(</span><span class="n">mediaPlayer</span><span class="o">.</span><span class="na">getCurrentPosition</span><span class="o">()</span> <span class="o">/</span> <span class="n">1000</span><span class="o">)</span> <span class="o">+</span> <span class="s">&#34; / &#34;</span> <span class="o">+</span> <span class="n">convertTime</span><span class="o">(</span><span class="n">mediaPlayer</span><span class="o">.</span><span class="na">getDuration</span><span class="o">()</span> <span class="o">/</span> <span class="n">1000</span><span class="o">));</span>
-                   <span class="o">}</span>
-                   <span class="k">else</span> <span class="o">{</span>
-                       <span class="n">time</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">convertTime</span><span class="o">(</span><span class="n">mediaPlayer</span><span class="o">.</span><span class="na">getDuration</span><span class="o">()</span> <span class="o">/</span> <span class="n">1000</span><span class="o">));</span>
-                       <span class="n">seekBar</span><span class="o">.</span><span class="na">setProgress</span><span class="o">(</span><span class="n">0</span><span class="o">);</span>
-                   <span class="o">}</span>
-                   <span class="n">Handler</span> <span class="n">handler</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Handler</span><span class="o">();</span>
-                   <span class="k">try</span><span class="o">{</span>
-                       <span class="n">Runnable</span> <span class="n">runnable</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-                           <span class="nd">@Override</span>
-                           <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-                               <span class="k">try</span><span class="o">{</span>
-                                   <span class="k">if</span> <span class="o">(</span><span class="n">mediaPlayer</span><span class="o">.</span><span class="na">getCurrentPosition</span><span class="o">()</span> <span class="o">&gt;</span> <span class="o">-</span><span class="n">1</span><span class="o">)</span> <span class="o">{</span>
-                                       <span class="k">try</span> <span class="o">{</span>
-                                           <span class="n">update</span><span class="o">(</span><span class="n">mediaPlayer</span><span class="o">,</span> <span class="n">time</span><span class="o">,</span> <span class="n">seekBar</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
-                                       <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-                                           <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-                                       <span class="o">}</span>
-                                   <span class="o">}</span>
-                               <span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">){</span>
-                                   <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-                               <span class="o">}</span>
-                           <span class="o">}</span>
-                       <span class="o">};</span>
-                       <span class="n">handler</span><span class="o">.</span><span class="na">postDelayed</span><span class="o">(</span><span class="n">runnable</span><span class="o">,</span> <span class="n">2</span><span class="o">);</span>
-                   <span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">){</span>
-                       <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-                   <span class="o">}</span>
-   
-               <span class="o">}</span>
-           <span class="o">});</span>
-       <span class="o">}</span>
-   
-   <span class="o">}</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nn">me.jagar.tutorial</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.content.Context</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.media.AudioManager</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.media.MediaPlayer</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.os.Handler</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.widget.ImageView</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.widget.SeekBar</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.widget.TextView</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">VoicePlayer</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">static</span> <span class="n">VoicePlayer</span> <span class="n">mInstance</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">Context</span> <span class="n">context</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">ImageView</span> <span class="n">imgPlay</span><span class="o">,</span> <span class="n">imgPause</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">SeekBar</span> <span class="n">seekBar</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">TextView</span> <span class="n">txtProcess</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">MediaPlayer</span> <span class="n">mediaPlayer</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="nf">VoicePlayer</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="o">.</span><span class="na">context</span> <span class="o">=</span> <span class="n">context</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">synchronized</span> <span class="n">VoicePlayer</span> <span class="nf">getInstance</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">(</span><span class="n">mInstance</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="n">VoicePlayer</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">mInstance</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">String</span> <span class="n">path</span><span class="o">,</span> <span class="kd">final</span> <span class="n">ImageView</span> <span class="n">imgPlay</span><span class="o">,</span> <span class="kd">final</span> <span class="n">ImageView</span> <span class="n">imgPause</span><span class="o">,</span> <span class="kd">final</span> <span class="n">SeekBar</span> <span class="n">seekBar</span><span class="o">,</span> <span class="kd">final</span> <span class="n">TextView</span> <span class="n">txtProcess</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="o">.</span><span class="na">imgPlay</span> <span class="o">=</span> <span class="n">imgPlay</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="o">.</span><span class="na">imgPause</span> <span class="o">=</span> <span class="n">imgPause</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="o">.</span><span class="na">seekBar</span> <span class="o">=</span> <span class="n">seekBar</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="o">.</span><span class="na">txtProcess</span> <span class="o">=</span> <span class="n">txtProcess</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">mediaPlayer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MediaPlayer</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">(</span><span class="n">path</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">try</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">setDataSource</span><span class="o">(</span><span class="n">path</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">setAudioStreamType</span><span class="o">(</span><span class="n">AudioManager</span><span class="o">.</span><span class="na">STREAM_MUSIC</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">prepare</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">                <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">setVolume</span><span class="o">(</span><span class="n">10</span><span class="o">,</span> <span class="n">10</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">//START and PAUSE are in other listeners
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">setOnPreparedListener</span><span class="o">(</span><span class="k">new</span> <span class="n">MediaPlayer</span><span class="o">.</span><span class="na">OnPreparedListener</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">                    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onPrepared</span><span class="o">(</span><span class="n">MediaPlayer</span> <span class="n">mp</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">seekBar</span><span class="o">.</span><span class="na">setMax</span><span class="o">(</span><span class="n">mp</span><span class="o">.</span><span class="na">getDuration</span><span class="o">());</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">txtProcess</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">&#34;00:00:00/&#34;</span><span class="o">+</span><span class="n">convertTime</span><span class="o">(</span><span class="n">mp</span><span class="o">.</span><span class="na">getDuration</span><span class="o">()</span> <span class="o">/</span> <span class="n">1000</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl">                    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">                <span class="o">});</span>
+</span></span><span class="line"><span class="cl">                <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">setOnCompletionListener</span><span class="o">(</span><span class="k">new</span> <span class="n">MediaPlayer</span><span class="o">.</span><span class="na">OnCompletionListener</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">                    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCompletion</span><span class="o">(</span><span class="n">MediaPlayer</span> <span class="n">mp</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">imgPause</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">imgPlay</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">                <span class="o">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="o">.</span><span class="na">seekBar</span><span class="o">.</span><span class="na">setOnSeekBarChangeListener</span><span class="o">(</span><span class="n">seekBarListener</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="o">.</span><span class="na">imgPlay</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">imgPlayClickListener</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="o">.</span><span class="na">imgPause</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">imgPauseClickListener</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//Convert long milli seconds to a formatted String to display it
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">convertTime</span><span class="o">(</span><span class="kt">long</span> <span class="n">seconds</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">long</span> <span class="n">s</span> <span class="o">=</span> <span class="n">seconds</span> <span class="o">%</span> <span class="n">60</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">long</span> <span class="n">m</span> <span class="o">=</span> <span class="o">(</span><span class="n">seconds</span> <span class="o">/</span> <span class="n">60</span><span class="o">)</span> <span class="o">%</span> <span class="n">60</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">long</span> <span class="n">h</span> <span class="o">=</span> <span class="o">(</span><span class="n">seconds</span> <span class="o">/</span> <span class="o">(</span><span class="n">60</span> <span class="o">*</span> <span class="n">60</span><span class="o">))</span> <span class="o">%</span> <span class="n">24</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&#34;%02d:%02d:%02d&#34;</span><span class="o">,</span> <span class="n">h</span><span class="o">,</span><span class="n">m</span><span class="o">,</span><span class="n">s</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//These both functions to avoid mediaplayer errors
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onStop</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">try</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">stop</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">reset</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">release</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onPause</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">try</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="o">(</span><span class="n">mediaPlayer</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="o">(</span><span class="n">mediaPlayer</span><span class="o">.</span><span class="na">isPlaying</span><span class="o">())</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">pause</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">imgPause</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">imgPlay</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//Components&#39; listeners
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span> <span class="n">imgPlayClickListener</span> <span class="o">=</span> <span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">View</span> <span class="n">v</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">imgPause</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">imgPlay</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">            <span class="k">try</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">update</span><span class="o">(</span><span class="n">mediaPlayer</span><span class="o">,</span> <span class="n">txtProcess</span><span class="o">,</span> <span class="n">seekBar</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">                <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">SeekBar</span><span class="o">.</span><span class="na">OnSeekBarChangeListener</span> <span class="n">seekBarListener</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SeekBar</span><span class="o">.</span><span class="na">OnSeekBarChangeListener</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onProgressChanged</span><span class="o">(</span><span class="n">SeekBar</span> <span class="n">seekBar</span><span class="o">,</span> <span class="kt">int</span> <span class="n">progress</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">fromUser</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="o">(</span><span class="n">fromUser</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">            <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">seekTo</span><span class="o">(</span><span class="n">progress</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onStartTrackingTouch</span><span class="o">(</span><span class="n">SeekBar</span> <span class="n">seekBar</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">imgPause</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">imgPlay</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onStopTrackingTouch</span><span class="o">(</span><span class="n">SeekBar</span> <span class="n">seekBar</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">imgPlay</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">imgPause</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span> <span class="n">imgPauseClickListener</span> <span class="o">=</span> <span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">View</span> <span class="n">v</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">imgPause</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">imgPlay</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">pause</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//Updating seekBar in realtime
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">update</span><span class="o">(</span><span class="kd">final</span> <span class="n">MediaPlayer</span> <span class="n">mediaPlayer</span><span class="o">,</span> <span class="kd">final</span> <span class="n">TextView</span> <span class="n">time</span><span class="o">,</span> <span class="kd">final</span> <span class="n">SeekBar</span> <span class="n">seekBar</span><span class="o">,</span> <span class="kd">final</span> <span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="o">((</span><span class="n">Activity</span><span class="o">)</span><span class="n">context</span><span class="o">).</span><span class="na">runOnUiThread</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">seekBar</span><span class="o">.</span><span class="na">setProgress</span><span class="o">(</span><span class="n">mediaPlayer</span><span class="o">.</span><span class="na">getCurrentPosition</span><span class="o">());</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="o">(</span><span class="n">mediaPlayer</span><span class="o">.</span><span class="na">getDuration</span><span class="o">()</span> <span class="o">-</span> <span class="n">mediaPlayer</span><span class="o">.</span><span class="na">getCurrentPosition</span><span class="o">()</span> <span class="o">&gt;</span> <span class="n">100</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">time</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">convertTime</span><span class="o">(</span><span class="n">mediaPlayer</span><span class="o">.</span><span class="na">getCurrentPosition</span><span class="o">()</span> <span class="o">/</span> <span class="n">1000</span><span class="o">)</span> <span class="o">+</span> <span class="s">&#34; / &#34;</span> <span class="o">+</span> <span class="n">convertTime</span><span class="o">(</span><span class="n">mediaPlayer</span><span class="o">.</span><span class="na">getDuration</span><span class="o">()</span> <span class="o">/</span> <span class="n">1000</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl">                <span class="o">}</span>
+</span></span><span class="line"><span class="cl">                <span class="k">else</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">time</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">convertTime</span><span class="o">(</span><span class="n">mediaPlayer</span><span class="o">.</span><span class="na">getDuration</span><span class="o">()</span> <span class="o">/</span> <span class="n">1000</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">seekBar</span><span class="o">.</span><span class="na">setProgress</span><span class="o">(</span><span class="n">0</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                <span class="o">}</span>
+</span></span><span class="line"><span class="cl">                <span class="n">Handler</span> <span class="n">handler</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Handler</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">                <span class="k">try</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">Runnable</span> <span class="n">runnable</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">                        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                            <span class="k">try</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">                                <span class="k">if</span> <span class="o">(</span><span class="n">mediaPlayer</span><span class="o">.</span><span class="na">getCurrentPosition</span><span class="o">()</span> <span class="o">&gt;</span> <span class="o">-</span><span class="n">1</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                                    <span class="k">try</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                                        <span class="n">update</span><span class="o">(</span><span class="n">mediaPlayer</span><span class="o">,</span> <span class="n">time</span><span class="o">,</span> <span class="n">seekBar</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                                    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                                        <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">                                    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">                                <span class="o">}</span>
+</span></span><span class="line"><span class="cl">                            <span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">                                <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">                            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">                        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">                    <span class="o">};</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">handler</span><span class="o">.</span><span class="na">postDelayed</span><span class="o">(</span><span class="n">runnable</span><span class="o">,</span> <span class="n">2</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                <span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">                <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">});</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<ol>
-<li>We need to read from the storage so add this permission to your manifest file:</li>
-</ol>
+</div></li>
+<li>
+<p>We need to read from the storage so add this permission to your manifest file:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml">   <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.READ_EXTERNAL_STORAGE&#34;</span> <span class="nt">/&gt;</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.READ_EXTERNAL_STORAGE&#34;</span> <span class="nt">/&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<ol>
-<li>In our main Activity, we will only ask for permissions and initialize our voice player:</li>
-</ol>
+</div></li>
+<li>
+<p>In our main Activity, we will only ask for permissions and initialize our voice player:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -938,99 +928,99 @@
 </span><span class="lnt">77
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">   <span class="kn">package</span> <span class="nn">me.jagar.tutorial</span><span class="o">;</span>
-   
-   <span class="kn">import</span> <span class="nn">android.Manifest</span><span class="o">;</span>
-   <span class="kn">import</span> <span class="nn">android.content.pm.PackageManager</span><span class="o">;</span>
-   <span class="kn">import</span> <span class="nn">android.os.Environment</span><span class="o">;</span>
-   <span class="kn">import</span> <span class="nn">android.support.v4.app.ActivityCompat</span><span class="o">;</span>
-   <span class="kn">import</span> <span class="nn">android.support.v4.content.ContextCompat</span><span class="o">;</span>
-   <span class="kn">import</span> <span class="nn">android.support.v7.app.AppCompatActivity</span><span class="o">;</span>
-   <span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
-   <span class="kn">import</span> <span class="nn">android.widget.ImageView</span><span class="o">;</span>
-   <span class="kn">import</span> <span class="nn">android.widget.SeekBar</span><span class="o">;</span>
-   <span class="kn">import</span> <span class="nn">android.widget.TextView</span><span class="o">;</span>
-   
-   <span class="kn">import</span> <span class="nn">java.io.File</span><span class="o">;</span>
-   
-   <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
-   
-       <span class="kd">private</span> <span class="n">ImageView</span> <span class="n">imgPlay</span><span class="o">,</span> <span class="n">imgPause</span><span class="o">;</span>
-       <span class="kd">private</span> <span class="n">SeekBar</span> <span class="n">seekBar</span><span class="o">;</span>
-       <span class="kd">private</span> <span class="n">TextView</span> <span class="n">txtProcess</span><span class="o">;</span>
-       <span class="kd">private</span> <span class="n">String</span> <span class="n">path</span> <span class="o">=</span> <span class="n">Environment</span><span class="o">.</span><span class="na">getExternalStorageDirectory</span><span class="o">().</span><span class="na">getAbsolutePath</span><span class="o">()</span>
-               <span class="o">+</span> <span class="n">File</span><span class="o">.</span><span class="na">separator</span> <span class="o">+</span> <span class="s">&#34;song.mp3&#34;</span><span class="o">;</span>
-   
-       <span class="nd">@Override</span>
-       <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-           <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-           <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
-   
-           <span class="n">imgPlay</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">imgPlay</span><span class="o">);</span>
-           <span class="n">imgPause</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">imgPause</span><span class="o">);</span>
-           <span class="n">seekBar</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">seekBar</span><span class="o">);</span>
-           <span class="n">txtProcess</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">txtTime</span><span class="o">);</span>
-   
-   
-           <span class="k">if</span> <span class="o">(</span><span class="n">ContextCompat</span><span class="o">.</span><span class="na">checkSelfPermission</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">READ_EXTERNAL_STORAGE</span><span class="o">)</span>
-                   <span class="o">!=</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">)</span> <span class="o">{</span>
-               <span class="c1">// Permission is not granted
-</span><span class="c1"></span>               <span class="n">ActivityCompat</span><span class="o">.</span><span class="na">requestPermissions</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span>
-                       <span class="k">new</span> <span class="n">String</span><span class="o">[]{</span><span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">READ_EXTERNAL_STORAGE</span><span class="o">},</span>
-                       <span class="n">101</span><span class="o">);</span>
-           <span class="o">}</span><span class="k">else</span><span class="o">{</span>
-               <span class="n">VoicePlayer</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">).</span><span class="na">init</span><span class="o">(</span><span class="n">path</span><span class="o">,</span> <span class="n">imgPlay</span><span class="o">,</span> <span class="n">imgPause</span><span class="o">,</span> <span class="n">seekBar</span><span class="o">,</span> <span class="n">txtProcess</span><span class="o">);</span>
-           <span class="o">}</span>
-   
-       <span class="o">}</span>
-   
-       <span class="nd">@Override</span>
-       <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onRequestPermissionsResult</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span>
-                                              <span class="n">String</span><span class="o">[]</span> <span class="n">permissions</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">grantResults</span><span class="o">)</span> <span class="o">{</span>
-           <span class="k">switch</span> <span class="o">(</span><span class="n">requestCode</span><span class="o">)</span> <span class="o">{</span>
-               <span class="k">case</span> <span class="nl">101:</span> <span class="o">{</span>
-                   <span class="k">if</span> <span class="o">(</span><span class="n">grantResults</span><span class="o">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="n">0</span>
-                           <span class="o">&amp;&amp;</span> <span class="n">grantResults</span><span class="o">[</span><span class="n">0</span><span class="o">]</span> <span class="o">==</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">)</span> <span class="o">{</span>
-   
-                       <span class="n">VoicePlayer</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">).</span><span class="na">init</span><span class="o">(</span><span class="n">path</span><span class="o">,</span> <span class="n">imgPlay</span><span class="o">,</span> <span class="n">imgPause</span><span class="o">,</span> <span class="n">seekBar</span><span class="o">,</span> <span class="n">txtProcess</span><span class="o">);</span>
-   
-                   <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-   
-                   <span class="o">}</span>
-                   <span class="k">return</span><span class="o">;</span>
-               <span class="o">}</span>
-   
-           <span class="o">}</span>
-       <span class="o">}</span>
-   
-       <span class="nd">@Override</span>
-       <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onStop</span><span class="o">()</span> <span class="o">{</span>
-           <span class="kd">super</span><span class="o">.</span><span class="na">onStop</span><span class="o">();</span>
-           <span class="n">VoicePlayer</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">).</span><span class="na">onStop</span><span class="o">();</span>
-       <span class="o">}</span>
-   
-       <span class="nd">@Override</span>
-       <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onPause</span><span class="o">()</span> <span class="o">{</span>
-           <span class="kd">super</span><span class="o">.</span><span class="na">onPause</span><span class="o">();</span>
-           <span class="n">VoicePlayer</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">).</span><span class="na">onPause</span><span class="o">();</span>
-       <span class="o">}</span>
-   <span class="o">}</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nn">me.jagar.tutorial</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.Manifest</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.content.pm.PackageManager</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.os.Environment</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.support.v4.app.ActivityCompat</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.support.v4.content.ContextCompat</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.support.v7.app.AppCompatActivity</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.widget.ImageView</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.widget.SeekBar</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.widget.TextView</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">java.io.File</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">ImageView</span> <span class="n">imgPlay</span><span class="o">,</span> <span class="n">imgPause</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">SeekBar</span> <span class="n">seekBar</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">TextView</span> <span class="n">txtProcess</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">String</span> <span class="n">path</span> <span class="o">=</span> <span class="n">Environment</span><span class="o">.</span><span class="na">getExternalStorageDirectory</span><span class="o">().</span><span class="na">getAbsolutePath</span><span class="o">()</span>
+</span></span><span class="line"><span class="cl">            <span class="o">+</span> <span class="n">File</span><span class="o">.</span><span class="na">separator</span> <span class="o">+</span> <span class="s">&#34;song.mp3&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">imgPlay</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">imgPlay</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">imgPause</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">imgPause</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">seekBar</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">seekBar</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">txtProcess</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">txtTime</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">(</span><span class="n">ContextCompat</span><span class="o">.</span><span class="na">checkSelfPermission</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">READ_EXTERNAL_STORAGE</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">                <span class="o">!=</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// Permission is not granted
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">ActivityCompat</span><span class="o">.</span><span class="na">requestPermissions</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">new</span> <span class="n">String</span><span class="o">[]{</span><span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">READ_EXTERNAL_STORAGE</span><span class="o">},</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">101</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span><span class="k">else</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">VoicePlayer</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">).</span><span class="na">init</span><span class="o">(</span><span class="n">path</span><span class="o">,</span> <span class="n">imgPlay</span><span class="o">,</span> <span class="n">imgPause</span><span class="o">,</span> <span class="n">seekBar</span><span class="o">,</span> <span class="n">txtProcess</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onRequestPermissionsResult</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">                                           <span class="n">String</span><span class="o">[]</span> <span class="n">permissions</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">grantResults</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">switch</span> <span class="o">(</span><span class="n">requestCode</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">case</span> <span class="n">101</span><span class="o">:</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="o">(</span><span class="n">grantResults</span><span class="o">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="n">0</span>
+</span></span><span class="line"><span class="cl">                        <span class="o">&amp;&amp;</span> <span class="n">grantResults</span><span class="o">[</span><span class="n">0</span><span class="o">]</span> <span class="o">==</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    <span class="n">VoicePlayer</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">).</span><span class="na">init</span><span class="o">(</span><span class="n">path</span><span class="o">,</span> <span class="n">imgPlay</span><span class="o">,</span> <span class="n">imgPause</span><span class="o">,</span> <span class="n">seekBar</span><span class="o">,</span> <span class="n">txtProcess</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="o">}</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onStop</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">super</span><span class="o">.</span><span class="na">onStop</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">VoicePlayer</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">).</span><span class="na">onStop</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onPause</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">super</span><span class="o">.</span><span class="na">onPause</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">VoicePlayer</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">).</span><span class="na">onPause</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
+</div></li>
+</ol>
 <h3 id="recommendations">Recommendations</h3>
-
 <ul>
 <li>You can get the same result and customization with my library <a href="https://github.com/JagarYousef/ChatVoicePlayer">ChatVoicePlayer</a>.</li>
 <li>Use <a href="https://github.com/Karumi/Dexter">Dexter</a> library for permissions.</li>
 </ul>
-
-<!--adsense-->
+<!-- raw HTML omitted -->
     </div>
 
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">Jagar</span>
+    <span class="item-content">Jagar Yousef</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
@@ -1074,6 +1064,10 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
+  
+
+  
+
       </div>
     </main>
 
@@ -1086,20 +1080,24 @@
 </div>
 
 <div class="copyright">
-  
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
 
   
 
   <span class="copyright-year">
     &copy; 
     2019 - 
-    2020
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Jagar</span>
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>Jagar</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -1110,7 +1108,10 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 <script type="application/javascript">

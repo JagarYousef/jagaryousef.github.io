@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hidden Android App on Jagar</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Hidden Android App on Jagar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Jun 2019 08:51:25 +0300</lastBuildDate>
-    
-	<atom:link href="https://jagar.me/tags/hidden-android-app/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 09 Jun 2019 08:51:25 +0300</lastBuildDate><atom:link href="https://jagar.me/tags/hidden-android-app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to open an app using a dialer call in Android Studio</title>
       <link>https://jagar.me/post/open-an-app-using-dialer-in-android/</link>

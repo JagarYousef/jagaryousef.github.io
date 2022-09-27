@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JavaFX on Jagar</title>
@@ -6,11 +6,7 @@
     <description>Recent content in JavaFX on Jagar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 25 May 2019 09:44:58 +0300</lastBuildDate>
-    
-	<atom:link href="https://jagar.me/tags/javafx/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 25 May 2019 09:44:58 +0300</lastBuildDate><atom:link href="https://jagar.me/tags/javafx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The easiest and best way to pass data (arguments) between controllers in JavaFX</title>
       <link>https://jagar.me/post/passingdatainjavafx/</link>

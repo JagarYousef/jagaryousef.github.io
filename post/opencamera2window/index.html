@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Jagar" /><meta name="description" content="In this tutorial we will go step-by-step on how to implement camera2 in our android app through opening a dialog with camera view, capturing a picture and display it in an ImageView without the need to open the default camera app or any other app in Android studio. This will add a great functionality to your apps.
+<meta name="author" content="Jagar Yousef" /><meta name="description" content="In this tutorial we will go step-by-step on how to implement camera2 in our android app through opening a dialog with camera view, capturing a picture and display it in an ImageView without the need to open the default camera app or any other app in Android studio. This will add a great functionality to your apps.
 " /><meta name="keywords" content="Java, Android, Tutorials" />
 
 
@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.104.1 with theme even" />
 
 
 <link rel="canonical" href="https://jagar.me/post/opencamera2window/" />
@@ -35,39 +35,25 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="How to use camera and capture photos in your app without using any other apps in Android Studio (using camera2)" />
 <meta property="og:description" content="In this tutorial we will go step-by-step on how to implement camera2 in our android app through opening a dialog with camera view, capturing a picture and display it in an ImageView without the need to open the default camera app or any other app in Android studio. This will add a great functionality to your apps." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jagar.me/post/opencamera2window/" />
-<meta property="article:published_time" content="2019-05-26T08:41:44&#43;03:00"/>
-<meta property="article:modified_time" content="2019-05-26T08:41:44&#43;03:00"/>
+<meta property="og:url" content="https://jagar.me/post/opencamera2window/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-05-26T08:41:44+03:00" />
+<meta property="article:modified_time" content="2019-05-26T08:41:44+03:00" />
 
 <meta itemprop="name" content="How to use camera and capture photos in your app without using any other apps in Android Studio (using camera2)">
-<meta itemprop="description" content="In this tutorial we will go step-by-step on how to implement camera2 in our android app through opening a dialog with camera view, capturing a picture and display it in an ImageView without the need to open the default camera app or any other app in Android studio. This will add a great functionality to your apps.">
-
-
-<meta itemprop="datePublished" content="2019-05-26T08:41:44&#43;03:00" />
-<meta itemprop="dateModified" content="2019-05-26T08:41:44&#43;03:00" />
+<meta itemprop="description" content="In this tutorial we will go step-by-step on how to implement camera2 in our android app through opening a dialog with camera view, capturing a picture and display it in an ImageView without the need to open the default camera app or any other app in Android studio. This will add a great functionality to your apps."><meta itemprop="datePublished" content="2019-05-26T08:41:44+03:00" />
+<meta itemprop="dateModified" content="2019-05-26T08:41:44+03:00" />
 <meta itemprop="wordCount" content="890">
-
-
-
-<meta itemprop="keywords" content="Camera2,Open A camera window,Capture Pictures,Example,CameraKit," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="Camera2,Open A camera window,Capture Pictures,Example,CameraKit," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to use camera and capture photos in your app without using any other apps in Android Studio (using camera2)"/>
 <meta name="twitter:description" content="In this tutorial we will go step-by-step on how to implement camera2 in our android app through opening a dialog with camera view, capturing a picture and display it in an ImageView without the need to open the default camera app or any other app in Android studio. This will add a great functionality to your apps."/>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-1293903967179873",
-    enable_page_level_ads: true
-  });
-</script>
-
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -94,38 +80,48 @@
   <ul class="mobile-menu-list">
     <a href="/">
         <li class="mobile-menu-item">Home</li>
-      </a><a href="/categories">
-        <li class="mobile-menu-item">Catagories</li>
+      </a><a href="/categories/android/">
+        <li class="mobile-menu-item">Android</li>
+      </a><a href="/categories/javafx/">
+        <li class="mobile-menu-item">JavaFX</li>
+      </a><a href="/categories/security/">
+        <li class="mobile-menu-item">Security</li>
       </a><a href="/tags/">
         <li class="mobile-menu-item">Tags</li>
-      </a><a href="https://github.com/JagarYousef">
-        <li class="mobile-menu-item">GitHub</li>
-      </a><a href="mailto:jagar.yousef@gmail.com">
-        <li class="mobile-menu-item">Contact</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Jagar</a>
 </div>
 
+
+
+
+
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
         <a class="menu-item-link" href="/">Home</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories">Catagories</a>
+        <a class="menu-item-link" href="/categories/android/">Android</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/javafx/">JavaFX</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/security/">Security</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="https://github.com/JagarYousef">GitHub</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="mailto:jagar.yousef@gmail.com">Contact</a>
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -151,48 +147,43 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#permissions">Permissions</a></li>
-<li><a href="#cameraview-dialog-xml">CameraView dialog XML</a></li>
-<li><a href="#cameraview-dialog-java">CameraView dialog JAVA</a></li>
-<li><a href="#library">Library</a></li>
-<li><a href="#result">Result</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#permissions">Permissions</a></li>
+        <li><a href="#cameraview-dialog-xml">CameraView dialog XML</a></li>
+        <li><a href="#cameraview-dialog-java">CameraView dialog JAVA</a></li>
+        <li><a href="#library">Library</a></li>
+        <li><a href="#result">Result</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
       <p>In this tutorial we will go step-by-step on how to implement camera2 in our android app through opening a dialog with camera view, capturing a picture and display it in an ImageView without the need to open the default camera app or any other app in Android studio. This will add a great functionality to your apps.</p>
-
-<!--adsense-->
-
+<!-- raw HTML omitted -->
 <h3 id="permissions">Permissions</h3>
-
 <p>We will add the following permissions to our <code>AndroidManifest.xml</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.WRITE_EXTERNAL_STORAGE&#34;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.READ_EXTERNAL_STORAGE&#34;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.CAMERA&#34;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.hardware.camera2.full&#34;</span> <span class="nt">/&gt;</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.WRITE_EXTERNAL_STORAGE&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.READ_EXTERNAL_STORAGE&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.CAMERA&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.hardware.camera2.full&#34;</span> <span class="nt">/&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<p>Since this a demo, I will ask for these permissions a button in the <code>MainActivity.java</code> is pressed</p>
+</div><p>Since this a demo, I will ask for these permissions a button in the <code>MainActivity.java</code> is pressed</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -210,28 +201,28 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Override</span>
-<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-    <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
-    
-    <span class="n">btnOpenCamera</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">btnOpenCamera</span><span class="o">);</span>
-
-
-    <span class="n">btnOpenCamera</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">checkPermissions</span><span class="o">();</span>
-        <span class="o">}</span>
-    <span class="o">});</span>
-
-<span class="o">}</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl"><span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">btnOpenCamera</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">btnOpenCamera</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">btnOpenCamera</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">checkPermissions</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<p>We will ask for the multiple permissions as following</p>
+</div><p>We will ask for the multiple permissions as following</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -257,36 +248,36 @@
 </span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">void</span> <span class="nf">checkPermissions</span><span class="o">()</span> <span class="o">{</span>
-    <span class="c1">//Permissions we need
-</span><span class="c1"></span>    <span class="n">String</span><span class="o">[]</span> <span class="n">permissions</span> <span class="o">=</span> <span class="o">{</span>
-            <span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">READ_EXTERNAL_STORAGE</span><span class="o">,</span>
-            <span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">WRITE_EXTERNAL_STORAGE</span><span class="o">,</span>
-            <span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">CAMERA</span>
-    <span class="o">};</span>
-    <span class="c1">//Permissions that we will ask for
-</span><span class="c1"></span>    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">needed_permissions</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
-
-    <span class="c1">//Check which is not granted yet
-</span><span class="c1"></span>    <span class="k">for</span> <span class="o">(</span><span class="n">String</span> <span class="n">permission</span> <span class="o">:</span> <span class="n">permissions</span><span class="o">){</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">ContextCompat</span><span class="o">.</span><span class="na">checkSelfPermission</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="n">permission</span><span class="o">)</span> <span class="o">!=</span>
-                <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">){</span>
-            <span class="n">needed_permissions</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">permission</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="c1">//Ask for multiple not granted permissions
-</span><span class="c1"></span>    <span class="k">if</span><span class="o">(!</span><span class="n">needed_permissions</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span>
-        <span class="n">ActivityCompat</span><span class="o">.</span><span class="na">requestPermissions</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="n">needed_permissions</span><span class="o">.</span><span class="na">toArray</span><span class="o">(</span><span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="n">needed_permissions</span><span class="o">.</span><span class="na">size</span><span class="o">()]),</span> <span class="n">ALL_PERMISSIONS</span><span class="o">);</span>
-    <span class="k">else</span>
-        <span class="n">openCameraDialog</span><span class="o">();</span>
-<span class="o">}</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">private</span> <span class="kt">void</span> <span class="nf">checkPermissions</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//Permissions we need
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">String</span><span class="o">[]</span> <span class="n">permissions</span> <span class="o">=</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">READ_EXTERNAL_STORAGE</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">WRITE_EXTERNAL_STORAGE</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">CAMERA</span>
+</span></span><span class="line"><span class="cl">    <span class="o">};</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//Permissions that we will ask for
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">needed_permissions</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//Check which is not granted yet
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">for</span> <span class="o">(</span><span class="n">String</span> <span class="n">permission</span> <span class="o">:</span> <span class="n">permissions</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">(</span><span class="n">ContextCompat</span><span class="o">.</span><span class="na">checkSelfPermission</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="n">permission</span><span class="o">)</span> <span class="o">!=</span>
+</span></span><span class="line"><span class="cl">                <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">            <span class="n">needed_permissions</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">permission</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//Ask for multiple not granted permissions
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span><span class="o">(!</span><span class="n">needed_permissions</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ActivityCompat</span><span class="o">.</span><span class="na">requestPermissions</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="n">needed_permissions</span><span class="o">.</span><span class="na">toArray</span><span class="o">(</span><span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="n">needed_permissions</span><span class="o">.</span><span class="na">size</span><span class="o">()]),</span> <span class="n">ALL_PERMISSIONS</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="n">openCameraDialog</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<p>Then we handle the result of the permissions&rsquo; request</p>
+</div><p>Then we handle the result of the permissions&rsquo; request</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -305,31 +296,30 @@
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Override</span>
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">onRequestPermissionsResult</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="nd">@NonNull</span> <span class="n">String</span><span class="o">[]</span> <span class="n">permissions</span><span class="o">,</span> <span class="nd">@NonNull</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">grantResults</span><span class="o">)</span> <span class="o">{</span>
-    <span class="kd">super</span><span class="o">.</span><span class="na">onRequestPermissionsResult</span><span class="o">(</span><span class="n">requestCode</span><span class="o">,</span> <span class="n">permissions</span><span class="o">,</span> <span class="n">grantResults</span><span class="o">);</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">requestCode</span> <span class="o">==</span> <span class="n">ALL_PERMISSIONS</span><span class="o">){</span>
-        <span class="k">if</span> <span class="o">((</span><span class="n">grantResults</span><span class="o">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="n">0</span><span class="o">)</span> <span class="o">&amp;&amp;</span>
-                <span class="o">(</span><span class="n">grantResults</span><span class="o">[</span><span class="n">0</span><span class="o">]</span>
-                        <span class="o">+</span> <span class="n">grantResults</span><span class="o">[</span><span class="n">1</span><span class="o">]</span>
-                        <span class="o">+</span> <span class="n">grantResults</span><span class="o">[</span><span class="n">2</span><span class="o">]</span> <span class="o">==</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">)){</span>
-            <span class="c1">//This method will open the popup (dialog) cameraview 
-</span><span class="c1"></span>            <span class="n">openCameraDialog</span><span class="o">();</span>
-            
-        <span class="o">}</span><span class="k">else</span> <span class="o">{</span>
-            <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">&#34;All permissions need to be granted&#34;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">)</span>
-                    <span class="o">.</span><span class="na">show</span><span class="o">();</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-<span class="o">}</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">onRequestPermissionsResult</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="nd">@NonNull</span> <span class="n">String</span><span class="o">[]</span> <span class="n">permissions</span><span class="o">,</span> <span class="nd">@NonNull</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">grantResults</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">super</span><span class="o">.</span><span class="na">onRequestPermissionsResult</span><span class="o">(</span><span class="n">requestCode</span><span class="o">,</span> <span class="n">permissions</span><span class="o">,</span> <span class="n">grantResults</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">(</span><span class="n">requestCode</span> <span class="o">==</span> <span class="n">ALL_PERMISSIONS</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">((</span><span class="n">grantResults</span><span class="o">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="n">0</span><span class="o">)</span> <span class="o">&amp;&amp;</span>
+</span></span><span class="line"><span class="cl">                <span class="o">(</span><span class="n">grantResults</span><span class="o">[</span><span class="n">0</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">                        <span class="o">+</span> <span class="n">grantResults</span><span class="o">[</span><span class="n">1</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">                        <span class="o">+</span> <span class="n">grantResults</span><span class="o">[</span><span class="n">2</span><span class="o">]</span> <span class="o">==</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">)){</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">//This method will open the popup (dialog) cameraview 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">openCameraDialog</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">        <span class="o">}</span><span class="k">else</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">&#34;All permissions need to be granted&#34;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="o">.</span><span class="na">show</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="cameraview-dialog-xml">CameraView dialog XML</h3>
-
+</div><h3 id="cameraview-dialog-xml">CameraView dialog XML</h3>
 <p>We will use some floating button, a cameraView, and a smooth way to insert images in the imageView in our work so we will need CameraKit and the following dependencies</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -338,19 +328,19 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span> <span class="s1">&#39;com.android.support:design:28.0.0&#39;</span>
-<span class="n">implementation</span> <span class="s1">&#39;com.camerakit:camerakit:1.0.0-beta3.11&#39;</span>
-<span class="n">implementation</span> <span class="s1">&#39;com.camerakit:jpegkit:0.1.0&#39;</span>
-<span class="n">implementation</span> <span class="s1">&#39;org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.0&#39;</span>
-<span class="n">implementation</span> <span class="s1">&#39;org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.0&#39;</span>
-<span class="n">implementation</span> <span class="s1">&#39;com.github.bumptech.glide:glide:4.9.0&#39;</span>
-<span class="n">annotationProcessor</span> <span class="s1">&#39;com.github.bumptech.glide:compiler:4.9.0&#39;</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">implementation</span> <span class="s1">&#39;com.android.support:design:28.0.0&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">implementation</span> <span class="s1">&#39;com.camerakit:camerakit:1.0.0-beta3.11&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">implementation</span> <span class="s1">&#39;com.camerakit:jpegkit:0.1.0&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">implementation</span> <span class="s1">&#39;org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.0&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">implementation</span> <span class="s1">&#39;org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.0&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">implementation</span> <span class="s1">&#39;com.github.bumptech.glide:glide:4.9.0&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">annotationProcessor</span> <span class="s1">&#39;com.github.bumptech.glide:compiler:4.9.0&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<p>We will also <u>Vector asset</u> to download some icons for our buttons on the <code>cameraView</code> dialog, then we will create our <code>camera_view.xml</code> in drawable/layout</p>
+</div><p>We will also <!-- raw HTML omitted -->Vector asset<!-- raw HTML omitted --> to download some icons for our buttons on the <code>cameraView</code> dialog, then we will create our <code>camera_view.xml</code> in drawable/layout</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -406,70 +396,68 @@
 </span><span class="lnt">54
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
-<span class="nt">&lt;RelativeLayout</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
-    <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
-    <span class="na">android:layout_height=</span><span class="s">&#34;match_parent&#34;</span>
-    <span class="na">xmlns:app=</span><span class="s">&#34;http://schemas.android.com/apk/res-auto&#34;</span><span class="nt">&gt;</span>
-
-    <span class="nt">&lt;com.camerakit.CameraKitView</span>
-        <span class="na">android:id=</span><span class="s">&#34;@+id/cameraKitView&#34;</span>
-        <span class="na">app:camera_facing=</span><span class="s">&#34;back&#34;</span>
-        <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
-        <span class="na">android:layout_height=</span><span class="s">&#34;match_parent&#34;</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;ImageView</span>
-        <span class="na">android:id=</span><span class="s">&#34;@+id/imgView&#34;</span>
-        <span class="na">android:scaleType=</span><span class="s">&#34;centerCrop&#34;</span>
-        <span class="na">android:adjustViewBounds=</span><span class="s">&#34;true&#34;</span>
-        <span class="na">android:visibility=</span><span class="s">&#34;gone&#34;</span>
-        <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
-        <span class="na">android:layout_height=</span><span class="s">&#34;match_parent&#34;</span> <span class="nt">/&gt;</span>
-
-    <span class="nt">&lt;LinearLayout</span>
-        <span class="na">android:padding=</span><span class="s">&#34;16dp&#34;</span>
-        <span class="na">android:layout_centerHorizontal=</span><span class="s">&#34;true&#34;</span>
-        <span class="na">android:layout_alignParentBottom=</span><span class="s">&#34;true&#34;</span>
-        <span class="na">android:orientation=</span><span class="s">&#34;horizontal&#34;</span>
-        <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
-        <span class="na">android:layout_marginBottom=</span><span class="s">&#34;16dp&#34;</span>
-        <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
-        <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;android.support.design.widget.FloatingActionButton</span>
-            <span class="na">android:id=</span><span class="s">&#34;@+id/fabCapture&#34;</span>
-            <span class="na">android:alpha=</span><span class="s">&#34;0.5&#34;</span>
-            <span class="na">android:src=</span><span class="s">&#34;@drawable/ic_camera_camera_24dp&#34;</span>
-            <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
-            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
-            <span class="na">android:layout_alignParentBottom=</span><span class="s">&#34;true&#34;</span>
-            <span class="na">android:layout_centerHorizontal=</span><span class="s">&#34;true&#34;</span><span class="nt">/&gt;</span>
-        <span class="nt">&lt;android.support.design.widget.FloatingActionButton</span>
-            <span class="na">android:id=</span><span class="s">&#34;@+id/fabRepeat&#34;</span>
-            <span class="na">android:src=</span><span class="s">&#34;@drawable/ic_loop_white_24dp&#34;</span>
-            <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
-            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
-            <span class="na">android:visibility=</span><span class="s">&#34;gone&#34;</span>
-            <span class="na">android:alpha=</span><span class="s">&#34;0.5&#34;</span>
-            <span class="na">android:layout_marginEnd=</span><span class="s">&#34;16dp&#34;</span><span class="nt">/&gt;</span>
-        <span class="nt">&lt;android.support.design.widget.FloatingActionButton</span>
-            <span class="na">android:id=</span><span class="s">&#34;@+id/fabDone&#34;</span>
-            <span class="na">android:src=</span><span class="s">&#34;@drawable/ic_done_white_24dp&#34;</span>
-            <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
-            <span class="na">android:visibility=</span><span class="s">&#34;gone&#34;</span>
-            <span class="na">android:alpha=</span><span class="s">&#34;0.5&#34;</span>
-            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/LinearLayout&gt;</span>
-
-<span class="nt">&lt;/RelativeLayout&gt;</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;RelativeLayout</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">android:layout_height=</span><span class="s">&#34;match_parent&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">xmlns:app=</span><span class="s">&#34;http://schemas.android.com/apk/res-auto&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;com.camerakit.CameraKitView</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:id=</span><span class="s">&#34;@+id/cameraKitView&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">app:camera_facing=</span><span class="s">&#34;back&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:layout_height=</span><span class="s">&#34;match_parent&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;ImageView</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:id=</span><span class="s">&#34;@+id/imgView&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:scaleType=</span><span class="s">&#34;centerCrop&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:adjustViewBounds=</span><span class="s">&#34;true&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:visibility=</span><span class="s">&#34;gone&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:layout_height=</span><span class="s">&#34;match_parent&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;LinearLayout</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:padding=</span><span class="s">&#34;16dp&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:layout_centerHorizontal=</span><span class="s">&#34;true&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:layout_alignParentBottom=</span><span class="s">&#34;true&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:orientation=</span><span class="s">&#34;horizontal&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:layout_marginBottom=</span><span class="s">&#34;16dp&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;android.support.design.widget.FloatingActionButton</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:id=</span><span class="s">&#34;@+id/fabCapture&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:alpha=</span><span class="s">&#34;0.5&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:src=</span><span class="s">&#34;@drawable/ic_camera_camera_24dp&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:layout_alignParentBottom=</span><span class="s">&#34;true&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:layout_centerHorizontal=</span><span class="s">&#34;true&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;android.support.design.widget.FloatingActionButton</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:id=</span><span class="s">&#34;@+id/fabRepeat&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:src=</span><span class="s">&#34;@drawable/ic_loop_white_24dp&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:visibility=</span><span class="s">&#34;gone&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:alpha=</span><span class="s">&#34;0.5&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:layout_marginEnd=</span><span class="s">&#34;16dp&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;android.support.design.widget.FloatingActionButton</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:id=</span><span class="s">&#34;@+id/fabDone&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:src=</span><span class="s">&#34;@drawable/ic_done_white_24dp&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:visibility=</span><span class="s">&#34;gone&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:alpha=</span><span class="s">&#34;0.5&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/LinearLayout&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/RelativeLayout&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<p>Now we are ready to use our cameraview dialog in an alert dialog within <code>MainActivity.java</code></p>
-
+</div><p>Now we are ready to use our cameraview dialog in an alert dialog within <code>MainActivity.java</code></p>
 <h3 id="cameraview-dialog-java">CameraView dialog JAVA</h3>
-
 <p>We will handle opening the dialog, and all button actions on the CameraView via our following method</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">  1
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -574,130 +562,125 @@
 </span><span class="lnt">103
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">void</span> <span class="nf">openCameraDialog</span><span class="o">()</span> <span class="o">{</span>
-    
-    <span class="c1">//Inflating the AlertDialog
-</span><span class="c1"></span>    <span class="kd">final</span> <span class="n">AlertDialog</span><span class="o">.</span><span class="na">Builder</span> <span class="n">alertDialog</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AlertDialog</span><span class="o">.</span><span class="na">Builder</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">);</span>
-    <span class="n">LayoutInflater</span> <span class="n">inflater</span> <span class="o">=</span> <span class="n">getLayoutInflater</span><span class="o">();</span>
-    <span class="n">View</span> <span class="n">dialogView</span> <span class="o">=</span> <span class="n">inflater</span><span class="o">.</span><span class="na">inflate</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">camera_view</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
-    <span class="n">alertDialog</span><span class="o">.</span><span class="na">setView</span><span class="o">(</span><span class="n">dialogView</span><span class="o">);</span>
-
-    <span class="c1">//CameraView UI
-</span><span class="c1"></span>    <span class="kd">final</span> <span class="n">AlertDialog</span> <span class="n">screen</span> <span class="o">=</span> <span class="n">alertDialog</span><span class="o">.</span><span class="na">create</span><span class="o">();</span>
-    <span class="kd">final</span> <span class="n">CameraKitView</span> <span class="n">cameraKitView</span> <span class="o">=</span> <span class="n">dialogView</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">cameraKitView</span><span class="o">);</span>
-    <span class="kd">final</span> <span class="n">FloatingActionButton</span> <span class="n">fabCapture</span> <span class="o">=</span> <span class="n">dialogView</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">fabCapture</span><span class="o">);</span>
-    <span class="kd">final</span> <span class="n">FloatingActionButton</span> <span class="n">fabDone</span> <span class="o">=</span> <span class="n">dialogView</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">fabDone</span><span class="o">);</span>
-    <span class="kd">final</span> <span class="n">FloatingActionButton</span> <span class="n">fabRepeat</span> <span class="o">=</span> <span class="n">dialogView</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">fabRepeat</span><span class="o">);</span>
-    <span class="kd">final</span> <span class="n">ImageView</span> <span class="n">imageView</span> <span class="o">=</span> <span class="n">dialogView</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">imgView</span><span class="o">);</span>
-
-
-    <span class="c1">//Handler
-</span><span class="c1"></span>    <span class="kd">final</span> <span class="n">File</span><span class="o">[]</span> <span class="n">image</span> <span class="o">=</span> <span class="o">{</span><span class="kc">null</span><span class="o">};</span>
-
-    <span class="c1">//We start the camera
-</span><span class="c1"></span>    <span class="n">cameraKitView</span><span class="o">.</span><span class="na">onStart</span><span class="o">();</span>
-
-
-    <span class="c1">//Capturing action
-</span><span class="c1"></span>    <span class="n">fabCapture</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">cameraKitView</span><span class="o">.</span><span class="na">captureImage</span><span class="o">(</span><span class="k">new</span> <span class="n">CameraKitView</span><span class="o">.</span><span class="na">ImageCallback</span><span class="o">()</span> <span class="o">{</span>
-                <span class="nd">@SuppressLint</span><span class="o">(</span><span class="s">&#34;RestrictedApi&#34;</span><span class="o">)</span>
-                <span class="nd">@Override</span>
-                <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onImage</span><span class="o">(</span><span class="kd">final</span> <span class="n">CameraKitView</span> <span class="n">cameraKitView</span><span class="o">,</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">bytes</span><span class="o">)</span> <span class="o">{</span>
-                    <span class="n">File</span> <span class="n">folder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">Environment</span><span class="o">.</span><span class="na">getExternalStorageDirectory</span><span class="o">()</span> <span class="o">+</span> <span class="n">File</span><span class="o">.</span><span class="na">separator</span> <span class="o">+</span> <span class="s">&#34;Photos&#34;</span><span class="o">);</span>
-                    <span class="k">if</span> <span class="o">(!</span><span class="n">folder</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span>
-                        <span class="n">folder</span><span class="o">.</span><span class="na">mkdirs</span><span class="o">();</span>
-                    <span class="n">image</span><span class="o">[</span><span class="n">0</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">folder</span><span class="o">.</span><span class="na">getAbsoluteFile</span><span class="o">()</span> <span class="o">+</span> <span class="n">File</span><span class="o">.</span><span class="na">separator</span> <span class="o">+</span> <span class="s">&#34;photo.jpg&#34;</span><span class="o">);</span>
-                    <span class="k">if</span> <span class="o">(</span><span class="n">image</span><span class="o">[</span><span class="n">0</span><span class="o">].</span><span class="na">exists</span><span class="o">())</span>
-                        <span class="n">image</span><span class="o">[</span><span class="n">0</span><span class="o">].</span><span class="na">delete</span><span class="o">();</span>
-
-                    <span class="n">FileOutputStream</span> <span class="n">outputStream</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-                    <span class="k">try</span> <span class="o">{</span>
-                        <span class="n">outputStream</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="n">image</span><span class="o">[</span><span class="n">0</span><span class="o">].</span><span class="na">getPath</span><span class="o">(),</span> <span class="kc">false</span><span class="o">);</span>
-                        <span class="n">outputStream</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">bytes</span><span class="o">);</span>
-                        <span class="n">outputStream</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
-                        <span class="n">outputStream</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-                        <span class="n">Glide</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">)</span>
-                                <span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="n">image</span><span class="o">[</span><span class="n">0</span><span class="o">])</span>
-                                <span class="o">.</span><span class="na">skipMemoryCache</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
-                                <span class="o">.</span><span class="na">diskCacheStrategy</span><span class="o">(</span><span class="n">DiskCacheStrategy</span><span class="o">.</span><span class="na">NONE</span><span class="o">)</span>
-                                <span class="o">.</span><span class="na">into</span><span class="o">(</span><span class="n">imageView</span><span class="o">);</span>
-                        <span class="n">cameraKitView</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
-                        <span class="n">imageView</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
-                        <span class="n">fabCapture</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
-                        <span class="n">fabDone</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
-                        <span class="n">fabRepeat</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
-                    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-                        <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-                    <span class="o">}</span>
-                <span class="o">}</span>
-            <span class="o">});</span>
-        <span class="o">}</span>
-
-    <span class="o">});</span>
-
-    <span class="c1">//Recapturing
-</span><span class="c1"></span>    <span class="n">fabRepeat</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@SuppressLint</span><span class="o">(</span><span class="s">&#34;RestrictedApi&#34;</span><span class="o">)</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">imageView</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
-            <span class="n">cameraKitView</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
-            <span class="n">fabRepeat</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
-            <span class="n">fabDone</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
-            <span class="n">fabCapture</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">});</span>
-
-    <span class="c1">//Done, let&#39;s display it in the imgViewMainActivity
-</span><span class="c1"></span>    <span class="n">fabDone</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">if</span> <span class="o">(</span><span class="n">image</span><span class="o">[</span><span class="n">0</span><span class="o">]</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
-                <span class="n">Glide</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">)</span>
-                        <span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="n">image</span><span class="o">[</span><span class="n">0</span><span class="o">])</span>
-                        <span class="o">.</span><span class="na">skipMemoryCache</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
-                        <span class="o">.</span><span class="na">diskCacheStrategy</span><span class="o">(</span><span class="n">DiskCacheStrategy</span><span class="o">.</span><span class="na">NONE</span><span class="o">)</span>
-                        <span class="o">.</span><span class="na">into</span><span class="o">(</span><span class="n">imgViewMainActivity</span><span class="o">);</span>
-            <span class="n">screen</span><span class="o">.</span><span class="na">dismiss</span><span class="o">();</span>
-        <span class="o">}</span>
-    <span class="o">});</span>
-    
-    <span class="c1">//To let us start new capturing
-</span><span class="c1"></span>        <span class="n">screen</span><span class="o">.</span><span class="na">setOnDismissListener</span><span class="o">(</span><span class="k">new</span> <span class="n">DialogInterface</span><span class="o">.</span><span class="na">OnDismissListener</span><span class="o">()</span> <span class="o">{</span>
-            <span class="nd">@Override</span>
-            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onDismiss</span><span class="o">(</span><span class="n">DialogInterface</span> <span class="n">dialogInterface</span><span class="o">)</span> <span class="o">{</span>
-                <span class="n">cameraKitView</span><span class="o">.</span><span class="na">stopVideo</span><span class="o">();</span>
-                <span class="n">cameraKitView</span><span class="o">.</span><span class="na">onStop</span><span class="o">();</span>
-            <span class="o">}</span>
-        <span class="o">});</span>
-
-    <span class="c1">//Display the dialog
-</span><span class="c1"></span>    <span class="n">screen</span><span class="o">.</span><span class="na">show</span><span class="o">();</span>
-<span class="o">}</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">private</span> <span class="kt">void</span> <span class="nf">openCameraDialog</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">//Inflating the AlertDialog
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">final</span> <span class="n">AlertDialog</span><span class="o">.</span><span class="na">Builder</span> <span class="n">alertDialog</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AlertDialog</span><span class="o">.</span><span class="na">Builder</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LayoutInflater</span> <span class="n">inflater</span> <span class="o">=</span> <span class="n">getLayoutInflater</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">View</span> <span class="n">dialogView</span> <span class="o">=</span> <span class="n">inflater</span><span class="o">.</span><span class="na">inflate</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">camera_view</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">alertDialog</span><span class="o">.</span><span class="na">setView</span><span class="o">(</span><span class="n">dialogView</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//CameraView UI
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">final</span> <span class="n">AlertDialog</span> <span class="n">screen</span> <span class="o">=</span> <span class="n">alertDialog</span><span class="o">.</span><span class="na">create</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">final</span> <span class="n">CameraKitView</span> <span class="n">cameraKitView</span> <span class="o">=</span> <span class="n">dialogView</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">cameraKitView</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">final</span> <span class="n">FloatingActionButton</span> <span class="n">fabCapture</span> <span class="o">=</span> <span class="n">dialogView</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">fabCapture</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">final</span> <span class="n">FloatingActionButton</span> <span class="n">fabDone</span> <span class="o">=</span> <span class="n">dialogView</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">fabDone</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">final</span> <span class="n">FloatingActionButton</span> <span class="n">fabRepeat</span> <span class="o">=</span> <span class="n">dialogView</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">fabRepeat</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">final</span> <span class="n">ImageView</span> <span class="n">imageView</span> <span class="o">=</span> <span class="n">dialogView</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">imgView</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//Handler
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">final</span> <span class="n">File</span><span class="o">[]</span> <span class="n">image</span> <span class="o">=</span> <span class="o">{</span><span class="kc">null</span><span class="o">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//We start the camera
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">cameraKitView</span><span class="o">.</span><span class="na">onStart</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//Capturing action
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">fabCapture</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cameraKitView</span><span class="o">.</span><span class="na">captureImage</span><span class="o">(</span><span class="k">new</span> <span class="n">CameraKitView</span><span class="o">.</span><span class="na">ImageCallback</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nd">@SuppressLint</span><span class="o">(</span><span class="s">&#34;RestrictedApi&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">                <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">                <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onImage</span><span class="o">(</span><span class="kd">final</span> <span class="n">CameraKitView</span> <span class="n">cameraKitView</span><span class="o">,</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">bytes</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">File</span> <span class="n">folder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">Environment</span><span class="o">.</span><span class="na">getExternalStorageDirectory</span><span class="o">()</span> <span class="o">+</span> <span class="n">File</span><span class="o">.</span><span class="na">separator</span> <span class="o">+</span> <span class="s">&#34;Photos&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="o">(!</span><span class="n">folder</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">folder</span><span class="o">.</span><span class="na">mkdirs</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">image</span><span class="o">[</span><span class="n">0</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">folder</span><span class="o">.</span><span class="na">getAbsoluteFile</span><span class="o">()</span> <span class="o">+</span> <span class="n">File</span><span class="o">.</span><span class="na">separator</span> <span class="o">+</span> <span class="s">&#34;photo.jpg&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="o">(</span><span class="n">image</span><span class="o">[</span><span class="n">0</span><span class="o">].</span><span class="na">exists</span><span class="o">())</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">image</span><span class="o">[</span><span class="n">0</span><span class="o">].</span><span class="na">delete</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    <span class="n">FileOutputStream</span> <span class="n">outputStream</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">try</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">outputStream</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="n">image</span><span class="o">[</span><span class="n">0</span><span class="o">].</span><span class="na">getPath</span><span class="o">(),</span> <span class="kc">false</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">outputStream</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">bytes</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">outputStream</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">outputStream</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">Glide</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">                                <span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="n">image</span><span class="o">[</span><span class="n">0</span><span class="o">])</span>
+</span></span><span class="line"><span class="cl">                                <span class="o">.</span><span class="na">skipMemoryCache</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">                                <span class="o">.</span><span class="na">diskCacheStrategy</span><span class="o">(</span><span class="n">DiskCacheStrategy</span><span class="o">.</span><span class="na">NONE</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">                                <span class="o">.</span><span class="na">into</span><span class="o">(</span><span class="n">imageView</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">cameraKitView</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">imageView</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">fabCapture</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">fabDone</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">fabRepeat</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">                    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">                <span class="o">}</span>
+</span></span><span class="line"><span class="cl">            <span class="o">});</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//Recapturing
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">fabRepeat</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nd">@SuppressLint</span><span class="o">(</span><span class="s">&#34;RestrictedApi&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">imageView</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cameraKitView</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">fabRepeat</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">fabDone</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">fabCapture</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//Done, let&#39;s display it in the imgViewMainActivity
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">fabDone</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="o">(</span><span class="n">image</span><span class="o">[</span><span class="n">0</span><span class="o">]</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">Glide</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">                        <span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="n">image</span><span class="o">[</span><span class="n">0</span><span class="o">])</span>
+</span></span><span class="line"><span class="cl">                        <span class="o">.</span><span class="na">skipMemoryCache</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">                        <span class="o">.</span><span class="na">diskCacheStrategy</span><span class="o">(</span><span class="n">DiskCacheStrategy</span><span class="o">.</span><span class="na">NONE</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">                        <span class="o">.</span><span class="na">into</span><span class="o">(</span><span class="n">imgViewMainActivity</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">screen</span><span class="o">.</span><span class="na">dismiss</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">});</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">//To let us start new capturing
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">screen</span><span class="o">.</span><span class="na">setOnDismissListener</span><span class="o">(</span><span class="k">new</span> <span class="n">DialogInterface</span><span class="o">.</span><span class="na">OnDismissListener</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onDismiss</span><span class="o">(</span><span class="n">DialogInterface</span> <span class="n">dialogInterface</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">cameraKitView</span><span class="o">.</span><span class="na">stopVideo</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">                <span class="n">cameraKitView</span><span class="o">.</span><span class="na">onStop</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//Display the dialog
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">screen</span><span class="o">.</span><span class="na">show</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div>
-<p>And that&rsquo;s it, here we go!</p>
-
+</div><p>And that&rsquo;s it, here we go!</p>
 <h3 id="library">Library</h3>
-
 <p>I have also created an android library that will save your time and effort if you wanted to use it, you can find it <a href="https://github.com/JagarYousef/DialogCameraView">here</a>.</p>
-
 <h3 id="result">Result</h3>
-
-<p><img src="https://user-images.githubusercontent.com/41321155/58381741-91a25600-7fc9-11e9-9761-782e22e01720.jpg" alt="CameraKitExample1" />
-<img src="https://user-images.githubusercontent.com/41321155/58381737-91a25600-7fc9-11e9-9a59-7690c5439320.jpg" alt="CameraKitExample2" />
-<img src="https://user-images.githubusercontent.com/41321155/58381740-91a25600-7fc9-11e9-91c4-21e6b74fc05a.jpg" alt="CameraKitExample3" /></p>
-
-<!--adsense-->
+<p><img src="https://user-images.githubusercontent.com/41321155/58381741-91a25600-7fc9-11e9-9761-782e22e01720.jpg" alt="CameraKitExample1">
+<img src="https://user-images.githubusercontent.com/41321155/58381737-91a25600-7fc9-11e9-9a59-7690c5439320.jpg" alt="CameraKitExample2">
+<img src="https://user-images.githubusercontent.com/41321155/58381740-91a25600-7fc9-11e9-91c4-21e6b74fc05a.jpg" alt="CameraKitExample3"></p>
+<!-- raw HTML omitted -->
     </div>
 
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">Jagar</span>
+    <span class="item-content">Jagar Yousef</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
@@ -747,6 +730,10 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
+  
+
+  
+
       </div>
     </main>
 
@@ -759,20 +746,24 @@
 </div>
 
 <div class="copyright">
-  
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
 
   
 
   <span class="copyright-year">
     &copy; 
     2019 - 
-    2020
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Jagar</span>
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>Jagar</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -783,7 +774,10 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 <script type="application/javascript">
