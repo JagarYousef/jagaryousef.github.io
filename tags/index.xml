@@ -6,7 +6,88 @@
     <description>Recent content in Tags on Jagar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Sep 2022 00:32:32 +0300</lastBuildDate><atom:link href="https://jagar.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Sep 2022 19:50:32 +0300</lastBuildDate><atom:link href="https://jagar.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apache</title>
+      <link>https://jagar.me/tags/apache/</link>
+      <pubDate>Wed, 28 Sep 2022 19:50:32 +0300</pubDate>
+      
+      <guid>https://jagar.me/tags/apache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CVE-2021-44228</title>
+      <link>https://jagar.me/tags/cve-2021-44228/</link>
+      <pubDate>Wed, 28 Sep 2022 19:50:32 +0300</pubDate>
+      
+      <guid>https://jagar.me/tags/cve-2021-44228/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dork</title>
+      <link>https://jagar.me/tags/dork/</link>
+      <pubDate>Wed, 28 Sep 2022 19:50:32 +0300</pubDate>
+      
+      <guid>https://jagar.me/tags/dork/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google</title>
+      <link>https://jagar.me/tags/google/</link>
+      <pubDate>Wed, 28 Sep 2022 19:50:32 +0300</pubDate>
+      
+      <guid>https://jagar.me/tags/google/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://jagar.me/tags/java/</link>
+      <pubDate>Wed, 28 Sep 2022 19:50:32 +0300</pubDate>
+      
+      <guid>https://jagar.me/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Log4J</title>
+      <link>https://jagar.me/tags/log4j/</link>
+      <pubDate>Wed, 28 Sep 2022 19:50:32 +0300</pubDate>
+      
+      <guid>https://jagar.me/tags/log4j/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://jagar.me/tags/python/</link>
+      <pubDate>Wed, 28 Sep 2022 19:50:32 +0300</pubDate>
+      
+      <guid>https://jagar.me/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scan</title>
+      <link>https://jagar.me/tags/scan/</link>
+      <pubDate>Wed, 28 Sep 2022 19:50:32 +0300</pubDate>
+      
+      <guid>https://jagar.me/tags/scan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>search</title>
+      <link>https://jagar.me/tags/search/</link>
+      <pubDate>Wed, 28 Sep 2022 19:50:32 +0300</pubDate>
+      
+      <guid>https://jagar.me/tags/search/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Check Host</title>
       <link>https://jagar.me/tags/check-host/</link>
@@ -22,15 +103,6 @@
       <pubDate>Wed, 28 Sep 2022 00:32:32 +0300</pubDate>
       
       <guid>https://jagar.me/tags/ping-ip/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://jagar.me/tags/python/</link>
-      <pubDate>Wed, 28 Sep 2022 00:32:32 +0300</pubDate>
-      
-      <guid>https://jagar.me/tags/python/</guid>
       <description></description>
     </item>
     

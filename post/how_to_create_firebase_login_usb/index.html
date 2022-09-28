@@ -50,7 +50,7 @@
 <meta itemprop="name" content="How to create a Firebase login usb">
 <meta itemprop="description" content="We will handle the Firebase admin SDK private key in a USB drive then login with it, once the USB is connected using the admin SDK for Java documentations."><meta itemprop="datePublished" content="2019-09-02T09:23:30+03:00" />
 <meta itemprop="dateModified" content="2022-09-28T08:00:17+03:00" />
-<meta itemprop="wordCount" content="1132">
+<meta itemprop="wordCount" content="1169">
 <meta itemprop="keywords" content="USB,Admin SDK," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to create a Firebase login usb"/>
 <meta name="twitter:description" content="We will handle the Firebase admin SDK private key in a USB drive then login with it, once the USB is connected using the admin SDK for Java documentations."/>
@@ -152,6 +152,7 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#preparing-the-usb">Preparing the USB</a></li>
         <li><a href="#creating-a-new-project-in-intellij">Creating a new project in Intellij</a></li>
         <li><a href="#result">Result</a></li>
       </ul>
@@ -164,6 +165,8 @@
       <p>We will handle the Firebase admin SDK private key in a USB drive then login with it, once the USB is connected using the admin SDK for Java documentations.</p>
 <p>The private key of your Firebase admin SDK is a sensitive file and shouldn&rsquo;t be included in your project files or saved on a fixed location on your machine, so we will see how we can save it and access it till login and retrieving data from the cloud firestore using a javaFX project.</p>
 <!-- raw HTML omitted -->
+<h3 id="preparing-the-usb">Preparing the USB</h3>
+<p>We create a <a href="https://console.firebase.google.com">firebase new project</a>, then need to download a private key for the admin SDK from Project <strong>Settings &gt; Service accounts</strong> , then we choose <strong>Java</strong> and click <strong>Generate new private key</strong>.</p>
 <p>I will rename the key to <strong>admin.json</strong> and put it in a clean USB.</p>
 <p>From Database, we create a new Cloud database and choose the locked mode. We insert some demo data as below:</p>
 <!-- raw HTML omitted -->
